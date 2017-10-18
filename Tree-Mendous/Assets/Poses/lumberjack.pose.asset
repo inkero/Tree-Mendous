@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: lumberjack.pose
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Colonne
+    localPosition: {x: 0.5474129, y: -1.5482154, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.69528306, w: 0.71873605}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/shoulder L
+    localPosition: {x: 3.0001092, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.71090037, w: 0.7032927}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/shoulder L/Arm L
+    localPosition: {x: 1.6499978, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.7051662, w: 0.709042}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/shoulder R
+    localPosition: {x: 2.9875498, y: 0.018879175, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.76755357, w: 0.64098483}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/shoulder R/Arm R
+    localPosition: {x: 1.4999996, y: -0.00000035762787, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.6529456, w: 0.7574048}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Neck
+    localPosition: {x: 2.9438713, y: -0.013869286, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.4315915, w: 0.90206915}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Neck/Head
+    localPosition: {x: 1.3000026, y: -0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.8900723, w: 0.45581937}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg R 1
+    localPosition: {x: -0.004400543, y: 0.037279844, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.93351924, w: 0.35852733}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg R 1/Leg R 2
+    localPosition: {x: 0.68694925, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.32334682, w: 0.94628054}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg R 1/Leg R 2/Leg R 3
+    localPosition: {x: 0.498916, y: 0.01, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.08412939, w: 0.99645483}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg L 1
+    localPosition: {x: -0.033062737, y: -0.048043523, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.92484856, w: -0.3803357}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg L 1/Leg L 2
+    localPosition: {x: 0.68694925, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.2763987, w: 0.96104306}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Leg L 1/Leg L 2/Leg L 3
+    localPosition: {x: 0.6182104, y: 0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.0005980199, w: 0.9999998}
+    localScale: {x: 1, y: 1, z: 1}
