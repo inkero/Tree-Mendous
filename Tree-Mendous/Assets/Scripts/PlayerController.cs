@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D myRB;
 	Animator myAnim;
 	bool facingRight;
+	public float myWidth;
 
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
+		myWidth = GetComponent<SpriteRenderer> ().bounds.extents.x;
 
 		facingRight = true;
 	}
