@@ -1245,6 +1245,7 @@ MonoBehaviour:
   maxSpeed: 2
   move: -1
   flipDelay: 2
+  passedWaitTime: 0
 --- !u!114 &114715455972701764
 MonoBehaviour:
   m_ObjectHideFlags: 1

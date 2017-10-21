@@ -7,10 +7,17 @@ public class PlayerController : MonoBehaviour {
 	// Movement variables
 	public float maxSpeed;
 
+	// Jumping variables
+	bool grounded = false;
+	float groundCheckRadius = 0.2f;
+	public LayerMask groundLayer;
+	public Transform groundCheck;
+	public float jumpHeight;
+
 	Rigidbody2D myRB;
 	Animator myAnim;
 	bool facingRight;
-	public float myWidth;
+	float myWidth;
 
 	// Use this for initialization
 	void Start () {
@@ -20,9 +27,24 @@ public class PlayerController : MonoBehaviour {
 
 		facingRight = true;
 	}
-	
+
+	void Update() {
+		if (grounded && Input.GetAxis ("Jump")>0) {
+			grounded = false;
+			myAnim.SetBool ("isGrounded", grounded);
+			myRB.AddForce (new Vector2 (0, jumpHeight));
+		}
+	}
+
 	// Update is called every period of time
 	void FixedUpdate () {
+
+		// Check if we are grounded - if no, then we are falling
+		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+		myAnim.SetBool ("isGrounded", grounded);
+
+		myAnim.SetFloat ("verticalSpeed", myRB.velocity.y);
+
 		float move = Input.GetAxis ("Horizontal");
 		myAnim.SetFloat ("speed", Mathf.Abs(move));
 

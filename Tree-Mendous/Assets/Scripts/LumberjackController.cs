@@ -9,7 +9,7 @@ public class LumberjackController : MonoBehaviour {
 	public float move;
 	public float flipDelay;
 
-	float passedWaitTime;
+	public float passedWaitTime;
 	Rigidbody2D myRB;
 	Animator myAnim;
 	float myWidth;
@@ -31,8 +31,8 @@ public class LumberjackController : MonoBehaviour {
 
 		// Check to see if there's ground in front of us before moving forward
 		Vector2 lineCastPos = transform.position - transform.up * myHeight - transform.right * myWidth;
-		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down*2);
-		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down*2, enemyMask);
+		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
+		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down, enemyMask);
 
 		// If the linecast is not colliding with ground, that means we need to stop
 		if (!isGrounded) {
@@ -44,15 +44,16 @@ public class LumberjackController : MonoBehaviour {
 				move = 0;
 				passedWaitTime = passedWaitTime + Time.deltaTime;
 
-			// When passed time reaches set delay, move to other direction and stop the timer
+			// When passed time reaches set delay, move to other direction and reset the timer
 			} else {
-				if (!facingRight) {
-					move = 1;
-				} else {
-					move = -1;
-				}
+				resetWalk ();
 				passedWaitTime = 0;
 			}
+		}
+
+		// If the AI is somehow moved into grounded mode while waiting, resume walking
+		if (move == 0 && isGrounded) {
+			resetWalk ();
 		}
 
 		// Move the character
@@ -67,6 +68,13 @@ public class LumberjackController : MonoBehaviour {
 		}
 	}
 
+	void resetWalk(){
+		if (!facingRight) {
+			move = 1;
+		} else {
+			move = -1;
+		}
+	}
 
 	void flip(){
 		facingRight = !facingRight;
