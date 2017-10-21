@@ -7,12 +7,9 @@ public class LumberjackController : MonoBehaviour {
 	public LayerMask enemyMask;
 	public float maxSpeed;
 	public float move;
+	public float flipDelay;
 
-	/*
-	public int secs2Wait = 3;
-	public int[] totalSec = new int[3];
-	*/
-
+	float passedWaitTime;
 	Rigidbody2D myRB;
 	Animator myAnim;
 	float myWidth;
@@ -37,11 +34,25 @@ public class LumberjackController : MonoBehaviour {
 		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down*2);
 		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down*2, enemyMask);
 
+		// If the linecast is not colliding with ground, that means we need to stop
 		if (!isGrounded) {
-			move = -move;
-			//move = 0;
-			//StartCoroutine(TimerEnumerator());
 
+			// Initially the passed time stays at zero, so we automatically start a wait timer
+			if (passedWaitTime < flipDelay) {
+
+				// Stop the character & start counting seconds for the passed wait time
+				move = 0;
+				passedWaitTime = passedWaitTime + Time.deltaTime;
+
+			// When passed time reaches set delay, move to other direction and stop the timer
+			} else {
+				if (!facingRight) {
+					move = 1;
+				} else {
+					move = -1;
+				}
+				passedWaitTime = 0;
+			}
 		}
 
 		// Move the character
@@ -56,13 +67,6 @@ public class LumberjackController : MonoBehaviour {
 		}
 	}
 
-	/*
-	IEnumerator TimerEnumerator(){
-		
-		yield return new WaitForSeconds (1);
-		totalSec [1]++;
-	}
-	*/
 
 	void flip(){
 		facingRight = !facingRight;
