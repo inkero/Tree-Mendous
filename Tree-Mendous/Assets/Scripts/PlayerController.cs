@@ -17,13 +17,17 @@ public class PlayerController : MonoBehaviour {
 	Rigidbody2D myRB;
 	Animator myAnim;
 	bool facingRight;
-	float myWidth;
+
+	// For shooting
+	public Transform weaponMuzzle;
+	public GameObject bullet;
+	float fireRate = 0.5f;
+	float nextFire = 0f;
 
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
-		myWidth = GetComponent<SpriteRenderer> ().bounds.extents.x;
 
 		facingRight = true;
 	}
@@ -33,6 +37,11 @@ public class PlayerController : MonoBehaviour {
 			grounded = false;
 			myAnim.SetBool ("isGrounded", grounded);
 			myRB.AddForce (new Vector2 (0, jumpHeight));
+		}
+
+		// Player shooting
+		if (Input.GetAxisRaw ("Fire1") > 0) {
+			fire ();
 		}
 	}
 
@@ -65,5 +74,16 @@ public class PlayerController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1; // Same as: theScale.x = theScale.x * -1
 		transform.localScale = theScale;
+	}
+
+	void fire(){
+		if (Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			if (facingRight) {
+				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+			} else if(!facingRight) {
+				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
+			}
+		}
 	}
 }

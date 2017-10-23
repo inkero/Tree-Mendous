@@ -6,10 +6,10 @@ public class LumberjackController : MonoBehaviour {
 
 	public LayerMask enemyMask;
 	public float maxSpeed;
-	public float move;
+	float move;
 	public float flipDelay;
 
-	public float passedWaitTime;
+	float passedWaitTime;
 	Rigidbody2D myRB;
 	Animator myAnim;
 	float myWidth;
