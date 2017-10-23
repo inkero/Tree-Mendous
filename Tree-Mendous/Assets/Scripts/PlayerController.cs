@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Jumping variables
 	bool grounded = false;
+	bool rootWallMuzzleGrounded = false;
 	float groundCheckRadius = 0.2f;
 	public LayerMask groundLayer;
 	public Transform groundCheck;
@@ -23,6 +24,10 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullet;
 	float fireRate = 0.5f;
 	float nextFire = 0f;
+
+	// For casting root wall
+	public Transform rootWallMuzzle;
+	public GameObject rootWall;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +48,11 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetAxisRaw ("Fire1") > 0) {
 			fire ();
 		}
+
+		// Player shooting
+		if (Input.GetAxisRaw ("Fire2") > 0 && grounded && rootWallMuzzleGrounded) {
+			createRootWall ();
+		}
 	}
 
 	// Update is called every period of time
@@ -51,6 +61,9 @@ public class PlayerController : MonoBehaviour {
 		// Check if we are grounded - if no, then we are falling
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		myAnim.SetBool ("isGrounded", grounded);
+
+		// Check if the root wall muzzle isn't hovering in air
+		rootWallMuzzleGrounded = Physics2D.OverlapCircle(rootWallMuzzle.position, groundCheckRadius, groundLayer);
 
 		myAnim.SetFloat ("verticalSpeed", myRB.velocity.y);
 
@@ -84,6 +97,13 @@ public class PlayerController : MonoBehaviour {
 			} else if(!facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
 			}
+		}
+	}
+
+	void createRootWall(){
+		if (Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate (rootWall, rootWallMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 		}
 	}
 }
