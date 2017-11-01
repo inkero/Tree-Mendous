@@ -6,10 +6,10 @@ public class LumberjackController : MonoBehaviour {
 
 	public LayerMask enemyMask;
 	public float maxSpeed;
-	float move;
+	public float move;
 	public float flipDelay;
 
-	float passedWaitTime;
+	public float passedWaitTime;
 	Rigidbody2D myRB;
 	Animator myAnim;
 	float myWidth;
@@ -34,8 +34,13 @@ public class LumberjackController : MonoBehaviour {
 		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
 		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down, enemyMask);
 
+		// Check if there's a wall
+		Vector2 lineCastPos2 = transform.position - transform.up * myHeight - transform.right * myWidth;
+		Debug.DrawLine(lineCastPos2, lineCastPos2 - transform.right.toVector2() * .2f);
+		bool isBlocked = Physics2D.Linecast (lineCastPos2, lineCastPos2 - transform.right.toVector2() * .2f, enemyMask);
+
 		// If the linecast is not colliding with ground, that means we need to stop
-		if (!isGrounded) {
+		if (!isGrounded || isBlocked) {
 
 			// Initially the passed time stays at zero, so we automatically start a wait timer
 			if (passedWaitTime < flipDelay) {
