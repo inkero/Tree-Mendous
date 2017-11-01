@@ -25,4 +25,13 @@ public class ProjectileController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.layer == 9) {
+			Destroy (col.gameObject);
+			Destroy (gameObject);
+		} else if(col.gameObject.layer != 8) {
+			Destroy (gameObject);
+		}
+	}
 }

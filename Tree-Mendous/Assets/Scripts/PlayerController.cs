@@ -29,10 +29,16 @@ public class PlayerController : MonoBehaviour {
 	public Transform rootWallMuzzle;
 	public GameObject rootWall;
 
+	// For audio
+	public AudioClip shootSound;
+	AudioSource audioSource;
+	public float shootVolume = 0.7f;
+
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
+		audioSource = GetComponent<AudioSource> ();
 
 		facingRight = true;
 	}
@@ -92,6 +98,7 @@ public class PlayerController : MonoBehaviour {
 	void fire(){
 		if (Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
+			audioSource.PlayOneShot (shootSound, shootVolume);
 			if (facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 			} else if(!facingRight) {
