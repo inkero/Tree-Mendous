@@ -16,6 +16,11 @@ public class LumberjackController : MonoBehaviour {
 	float myHeight;
 	bool facingRight;
 
+	// For audio
+	public AudioClip impact;
+	AudioSource audioSource;
+	public float impactVolume = 0.7f;
+
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
@@ -86,5 +91,9 @@ public class LumberjackController : MonoBehaviour {
 		Vector3 enemyRotation = transform.eulerAngles;
 		enemyRotation.y += 180; // Same as: theScale.x = theScale.x * -1
 		transform.eulerAngles = enemyRotation;
+	}
+
+	void OnDestroy(){
+		audioSource.PlayOneShot (impact, impactVolume);
 	}
 }

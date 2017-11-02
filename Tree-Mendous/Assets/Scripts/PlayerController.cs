@@ -44,10 +44,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (grounded && Input.GetAxis ("Jump")>0) {
+		if (grounded && Input.GetAxisRaw ("Jump") > 0) {
 			grounded = false;
 			myAnim.SetBool ("isGrounded", grounded);
-			myRB.AddForce (new Vector2 (0, jumpHeight));
+			myRB.AddForce (new Vector2 (0, jumpHeight), ForceMode2D.Impulse);
 		}
 
 		// Player shooting

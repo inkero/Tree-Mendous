@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 58782359064088604}
   - component: {fileID: 61628303869731804}
   - component: {fileID: 114699518437325148}
+  - component: {fileID: 82723761453375888}
   m_Layer: 9
   m_Name: Lumberjack
   m_TagString: Untagged
@@ -396,7 +397,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705166717863436}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7051682, w: 0.7090401}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7051661, w: 0.70904225}
   m_LocalPosition: {x: 1.6499978, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -630,7 +631,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104738148775146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.35999, y: 31.810001, z: 0}
+  m_LocalPosition: {x: 108, y: 31.810001, z: 0}
   m_LocalScale: {x: 0.3876416, y: 0.38764176, z: 1.550567}
   m_Children:
   - {fileID: 4462469092188716}
@@ -648,7 +649,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058858639255604}
-  m_LocalRotation: {x: 0, y: 0, z: -0.71090066, w: 0.7032925}
+  m_LocalRotation: {x: 0, y: 0, z: -0.71090055, w: 0.70329255}
   m_LocalPosition: {x: 3.0001092, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -785,21 +786,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874408760470320}
-  m_Mesh: {fileID: 43589645925772054, guid: d6cd914ac284f0540b46d9c0917d6876, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33898592894081652
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706036216123282}
-  m_Mesh: {fileID: 43750035425028956, guid: fd129f5c41bd7f444b8ab75b4e9220cd, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33998386292101576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987377417528742}
-  m_Mesh: {fileID: 43667616161211152, guid: bff4bc2c78045714683cd428338fa780, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!50 &50074647762899466
 Rigidbody2D:
   serializedVersion: 4
@@ -860,6 +861,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.32, y: 5.21}
   m_EdgeRadius: 0
+--- !u!82 &82723761453375888
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104738148775146}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 0.08
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 0.5
+  MaxDistance: 1.01
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95377813333068130
 Animator:
   serializedVersion: 3
@@ -928,7 +1009,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 108.36769, y: 30.630653, z: 0}
+    targetPosition: {x: 108.0077, y: 30.630653, z: 0}
     flip: 0
 --- !u!114 &114113151900149484
 MonoBehaviour:
@@ -1019,7 +1100,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.02639105, w: 0.99965173}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 108.85218, y: 30.575203, z: 0}
+    targetPosition: {x: 108.49219, y: 30.575203, z: 0}
     flip: 0
 --- !u!114 &114231456864073300
 MonoBehaviour:
@@ -1056,7 +1137,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.9414785, w: 0.337073}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 108.16617, y: 31.906912, z: 0}
+    targetPosition: {x: 107.806175, y: 31.906912, z: 0}
     flip: 0
 --- !u!114 &114278892208791010
 MonoBehaviour:
@@ -1109,7 +1190,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.64086574, w: 0.767653}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 108.02662, y: 31.50764, z: 0}
+    targetPosition: {x: 107.666626, y: 31.50764, z: 0}
     flip: 0
 --- !u!114 &114348054613857156
 MonoBehaviour:
@@ -1155,7 +1236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.6499902
+  m_Length: 1.6499901
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4195299754570136}
   m_AttachedIK: {fileID: 114569442834821958}
@@ -1185,16 +1266,16 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4897401141379052}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.71090066, w: 0.7032925}
+      solverRotation: {x: 0, y: 0, z: -0.71090055, w: 0.70329255}
       defaultLocalRotation: {x: 0, y: 0, z: -0.7478127, w: 0.6639098}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4195299754570136}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.7051682, w: 0.7090401}
+      solverRotation: {x: 0, y: 0, z: -0.70516604, w: 0.7090422}
       defaultLocalRotation: {x: -0, y: -0, z: -0.6642996, w: 0.7474665}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 109.20505, y: 31.182022, z: 0}
+    targetPosition: {x: 108.84506, y: 31.182022, z: 0}
     flip: 1
 --- !u!114 &114593347291142972
 MonoBehaviour:
@@ -1243,7 +1324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294966783
   maxSpeed: 2
-  move: -1
+  move: 0
   flipDelay: 2
   passedWaitTime: 0
 --- !u!114 &114715455972701764
@@ -1420,7 +1501,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43784378985001496, guid: ef5dfeeb341e819488e42e87674cb07b, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4462469092188716}
   - {fileID: 4178837142996390}
