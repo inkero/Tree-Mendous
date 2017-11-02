@@ -1327,8 +1327,6 @@ MonoBehaviour:
   move: 0
   flipDelay: 2
   passedWaitTime: 0
-  impact: {fileID: 0}
-  impactVolume: 0.7
 --- !u!114 &114715455972701764
 MonoBehaviour:
   m_ObjectHideFlags: 1
