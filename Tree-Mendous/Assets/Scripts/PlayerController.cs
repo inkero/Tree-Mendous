@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour {
 
 	// For audio
 	public AudioClip shootSound;
-	AudioSource audioSource;
 	public float shootVolume = 0.7f;
+	public AudioClip jumpSound;
+	public float jumpVolume = 0.7f;
+	AudioSource audioSource;
+
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 			grounded = false;
 			myAnim.SetBool ("isGrounded", grounded);
 			myRB.AddForce (new Vector2 (0, jumpHeight), ForceMode2D.Impulse);
+			audioSource.PlayOneShot (jumpSound, jumpVolume);
 		}
 
 		// Player shooting
