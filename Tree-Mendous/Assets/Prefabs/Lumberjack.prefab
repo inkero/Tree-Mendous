@@ -40,10 +40,9 @@ GameObject:
   - component: {fileID: 114610239276268874}
   - component: {fileID: 95377813333068130}
   - component: {fileID: 50074647762899466}
-  - component: {fileID: 58782359064088604}
-  - component: {fileID: 61628303869731804}
   - component: {fileID: 114699518437325148}
   - component: {fileID: 82579029805524016}
+  - component: {fileID: 70028056538895738}
   m_Layer: 9
   m_Name: Lumberjack
   m_TagString: Untagged
@@ -821,8 +820,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58782359064088604
-CircleCollider2D:
+--- !u!70 &70028056538895738
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -833,34 +832,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.79493964, y: -2.22}
-  serializedVersion: 2
-  m_Radius: 1.17
---- !u!61 &61628303869731804
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1104738148775146}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.7949396, y: 0.35}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.32, y: 5.21}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.7949515, y: -0.7608104}
+  m_Size: {x: 2.15, y: 5.254701}
+  m_Direction: 0
 --- !u!82 &82579029805524016
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1328,6 +1302,7 @@ MonoBehaviour:
   flipDelay: 2
   passedWaitTime: 0
   enemyMaxHealth: 100
+  currentHealth: 0
   chainsawSound: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
   chainsawVolume: 0.1
   hitSound: {fileID: 8300000, guid: c3815400414457a44acdf8e57746014b, type: 3}

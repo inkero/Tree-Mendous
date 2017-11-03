@@ -17,7 +17,7 @@ public class LumberjackController : MonoBehaviour {
 	bool facingRight;
 
 	public float enemyMaxHealth;
-	float currentHealth;
+	public float currentHealth;
 
 	// For audio
 	public AudioClip chainsawSound;
@@ -116,6 +116,6 @@ public class LumberjackController : MonoBehaviour {
 	}
 
 	void makeDead(){
-		Destroy (gameObject);
+		Destroy (gameObject, 0.5f);
 	}
 }
