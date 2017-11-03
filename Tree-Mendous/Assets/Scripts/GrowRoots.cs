@@ -13,7 +13,7 @@ public class GrowRoots : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		transform.localScale = new Vector3(transform.localScale.x, 0, transform.localScale.z);
+		transform.localScale = new Vector3(0, 0, transform.localScale.z);
 	}
 	
 	// Update is called once per frame
@@ -25,9 +25,10 @@ public class GrowRoots : MonoBehaviour {
 			if (transform.localScale.y < maxHeight) {
 				Vector3 newScale = transform.localScale;
 				newScale.y += growSpeed * Time.deltaTime;
+				newScale.x += growSpeed * Time.deltaTime;
 				transform.localScale = newScale;
 			} else {
-				transform.localScale = new Vector3 (transform.localScale.x, 1, transform.localScale.z);
+				transform.localScale = new Vector3 (1, 1, transform.localScale.z);
 				growing = false;
 			}
 		}
