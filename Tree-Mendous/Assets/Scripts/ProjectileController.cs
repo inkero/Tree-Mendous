@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour {
 
 	public float projectileSpeed;
+	public float weaponDamage;
 
 	Rigidbody2D myRB;
 
@@ -27,10 +28,11 @@ public class ProjectileController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.layer == 9) {
-			Destroy (col.gameObject);
+		if (col.gameObject.layer == 9) { // If collision object is an enemy
+			LumberjackController hurtEnemy = col.gameObject.GetComponent<LumberjackController>();
+			hurtEnemy.addDamage (weaponDamage);
 			Destroy (gameObject);
-		} else if(col.gameObject.layer != 8) {
+		} else if(col.gameObject.layer != 8) { // If collision object is not the player
 			Destroy (gameObject);
 		}
 	}

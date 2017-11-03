@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 58782359064088604}
   - component: {fileID: 61628303869731804}
   - component: {fileID: 114699518437325148}
-  - component: {fileID: 82723761453375888}
+  - component: {fileID: 82579029805524016}
   m_Layer: 9
   m_Name: Lumberjack
   m_TagString: Untagged
@@ -786,21 +786,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874408760470320}
-  m_Mesh: {fileID: 43589645925772054, guid: d6cd914ac284f0540b46d9c0917d6876, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33898592894081652
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706036216123282}
-  m_Mesh: {fileID: 43750035425028956, guid: fd129f5c41bd7f444b8ab75b4e9220cd, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33998386292101576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987377417528742}
-  m_Mesh: {fileID: 43667616161211152, guid: bff4bc2c78045714683cd428338fa780, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!50 &50074647762899466
 Rigidbody2D:
   serializedVersion: 4
@@ -861,7 +861,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.32, y: 5.21}
   m_EdgeRadius: 0
---- !u!82 &82723761453375888
+--- !u!82 &82579029805524016
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -870,18 +870,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 0.08
-  Loop: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 0
-  MinDistance: 0.5
-  MaxDistance: 1.01
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1327,6 +1327,11 @@ MonoBehaviour:
   move: 0
   flipDelay: 2
   passedWaitTime: 0
+  enemyMaxHealth: 100
+  chainsawSound: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
+  chainsawVolume: 0.1
+  hitSound: {fileID: 8300000, guid: c3815400414457a44acdf8e57746014b, type: 3}
+  hitVolume: 0.7
 --- !u!114 &114715455972701764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1501,7 +1506,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43784378985001496, guid: ef5dfeeb341e819488e42e87674cb07b, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4462469092188716}
   - {fileID: 4178837142996390}

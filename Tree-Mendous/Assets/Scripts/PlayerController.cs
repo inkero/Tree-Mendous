@@ -13,7 +13,12 @@ public class PlayerController : MonoBehaviour {
 	float groundCheckRadius = 0.2f;
 	public LayerMask groundLayer;
 	public Transform groundCheck;
-	public float jumpHeight;
+	public float jumpHeight = 15f;
+
+	// For jump delay
+	float passedWaitTime;
+	float jumpDelay = 0.2f;
+	bool startJumpTimer = false;
 
 	Rigidbody2D myRB;
 	Animator myAnim;
@@ -47,7 +52,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (grounded && Input.GetAxisRaw ("Jump") > 0) {
+		
+		if (grounded && Input.GetAxisRaw ("Jump") > 0 && !startJumpTimer) {
+			startJumpTimer = true; // Used for inconsistent jumping fix
 			grounded = false;
 			myAnim.SetBool ("isGrounded", grounded);
 			myRB.AddForce (new Vector2 (0, jumpHeight), ForceMode2D.Impulse);
@@ -67,6 +74,16 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called every period of time
 	void FixedUpdate () {
+
+		// To fix inconsistent jumping
+		if (startJumpTimer) {
+			if (passedWaitTime < jumpDelay) {
+				passedWaitTime = passedWaitTime + Time.deltaTime;
+			} else {
+				passedWaitTime = 0;
+				startJumpTimer = false;
+			}
+		}
 
 		// Check if we are grounded - if no, then we are falling
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);

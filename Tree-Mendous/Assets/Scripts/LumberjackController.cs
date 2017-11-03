@@ -16,14 +16,32 @@ public class LumberjackController : MonoBehaviour {
 	float myHeight;
 	bool facingRight;
 
+	public float enemyMaxHealth;
+	float currentHealth;
+
+	// For audio
+	public AudioClip chainsawSound;
+	public float chainsawVolume = 0.7f;
+	AudioSource audioSource;
+
+	public AudioClip hitSound;
+	public float hitVolume = 0.7f;
+
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
 		myWidth = GetComponent<SkinnedMeshRenderer> ().bounds.extents.x;
 		myHeight = GetComponent<SkinnedMeshRenderer> ().bounds.extents.y;
+		audioSource = GetComponent<AudioSource> ();
 
 		facingRight = false;
+
+		//audioSource.clip = chainsawSound;
+		//audioSource.Play ();
+
+		currentHealth = enemyMaxHealth;
+		audioSource = GetComponent<AudioSource> ();
 	}
 
 	void FixedUpdate () {
@@ -86,5 +104,18 @@ public class LumberjackController : MonoBehaviour {
 		Vector3 enemyRotation = transform.eulerAngles;
 		enemyRotation.y += 180; // Same as: theScale.x = theScale.x * -1
 		transform.eulerAngles = enemyRotation;
+	}
+
+	public void addDamage(float damage){
+		currentHealth -= damage;
+		audioSource.PlayOneShot (hitSound, hitVolume);
+
+		if (currentHealth <= 0){
+			makeDead ();
+		}
+	}
+
+	void makeDead(){
+		Destroy (gameObject);
 	}
 }
