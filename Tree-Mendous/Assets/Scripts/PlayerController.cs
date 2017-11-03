@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour {
 	Animator myAnim;
 	bool facingRight;
 
+	// For pickups
+	public float maxPower = 100f;
+	public float currentPower;
+
 	// For shooting
 	public Transform weaponMuzzle;
 	public GameObject bullet;
@@ -134,4 +138,18 @@ public class PlayerController : MonoBehaviour {
 			Instantiate (rootWall, rootWallMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 		}
 	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Sunbeam")
+            {
+				
+				if(!(currentPower >= maxPower)){
+					currentPower += 20;
+					Destroy(other.gameObject);
+				}
+            	
+            	
+            }
+        }
 }

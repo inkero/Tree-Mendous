@@ -9,6 +9,8 @@ public class LumberjackController : MonoBehaviour {
 	public float move;
 	public float flipDelay;
 
+	public GameObject pickup;
+
 	public float passedWaitTime;
 	Rigidbody2D myRB;
 	Animator myAnim;
@@ -116,6 +118,8 @@ public class LumberjackController : MonoBehaviour {
 	}
 
 	void makeDead(){
+		Instantiate (pickup, transform.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 		Destroy (gameObject, 0.5f);
+
 	}
 }
