@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 	public float shootVolume = 0.7f;
 	public AudioClip jumpSound;
 	public float jumpVolume = 0.7f;
+	public AudioClip pickupSound;
+	public float pickupVolume = 0.2f;
 	AudioSource audioSource;
 
 
@@ -123,7 +125,9 @@ public class PlayerController : MonoBehaviour {
 	void fire(){
 		if (Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
+			audioSource.pitch = 0.18f;
 			audioSource.PlayOneShot (shootSound, shootVolume);
+			audioSource.pitch = 1f;
 			if (facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 			} else if(!facingRight) {
@@ -143,6 +147,7 @@ public class PlayerController : MonoBehaviour {
 		if (other.tag == "Sunbeam") {
 			if (!(currentPower >= maxPower)) {
 				currentPower += 20;
+				audioSource.PlayOneShot (pickupSound, pickupVolume);
 				Destroy (other.gameObject);
 			}
         }
