@@ -58,6 +58,18 @@ public class LumberjackController : MonoBehaviour {
 		}
 	}
 
+	/*
+	void followPlayer(){
+		if (target.transform.position.x < transform.position.x) {
+			facingRight = false;
+			move = -1;
+		} else {
+			facingRight = true;
+			move = 1;
+		}
+	}
+	*/
+
 	void patrol(){
 		myAnim.SetFloat ("speed", Mathf.Abs(move));
 
