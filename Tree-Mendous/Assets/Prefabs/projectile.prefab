@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4041851999888840}
   - component: {fileID: 198558069604581334}
   - component: {fileID: 199540481953485114}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 50075159129778874}
   - component: {fileID: 114751954708267532}
   - component: {fileID: 114240493498035324}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: projectile
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4986464475912914}
   - component: {fileID: 212078446058056232}
   - component: {fileID: 68100710767688358}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -164,8 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c759984951aec05418c3af28d01acfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 15
+  projectileSpeed: 10
   weaponDamage: 50
+  verticalSpeed: 0.6
+  movementMultiplier: 1.5
 --- !u!198 &198558069604581334
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -315,7 +317,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.278}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
