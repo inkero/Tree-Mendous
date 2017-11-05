@@ -113,13 +113,14 @@ public class LumberjackController : MonoBehaviour {
 		audioSource.PlayOneShot (hitSound, hitVolume);
 
 		if (currentHealth <= 0){
-			makeDead ();
+			StartCoroutine ("makeDead");
 		}
 	}
 
-	void makeDead(){
-		Instantiate (pickup, transform.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
-		Destroy (gameObject, 0.5f);
 
+	IEnumerator makeDead(){
+		yield return new WaitForSeconds (0.5f);
+		Instantiate (pickup, transform.position + new Vector3(0, -.5f, 0), Quaternion.Euler (new Vector3 (0, 0, 0)));
+		Destroy (gameObject);
 	}
 }
