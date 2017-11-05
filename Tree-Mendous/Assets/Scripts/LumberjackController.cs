@@ -75,8 +75,8 @@ public class LumberjackController : MonoBehaviour {
 
 		// Check to see if there's ground in front of us before moving forward
 		Vector2 lineCastPos = transform.position - transform.up * myHeight - transform.right * myWidth;
-		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
-		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down, enemyMask);
+		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * .3f);
+		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down * .3f, enemyMask);
 
 		// Check if there's a wall
 		Vector2 lineCastPos2 = transform.position - transform.up * myHeight - transform.right * myWidth;
@@ -133,6 +133,7 @@ public class LumberjackController : MonoBehaviour {
 	}
 
 	public void addDamage(float damage){
+		myAnim.SetBool ("hit", true);
 		currentHealth -= damage;
 		audioSource.PlayOneShot (hitSound, hitVolume);
 
@@ -143,6 +144,7 @@ public class LumberjackController : MonoBehaviour {
 
 
 	IEnumerator makeDead(){
+		myAnim.SetBool ("died", true);
 		yield return new WaitForSeconds (0.5f);
 		Instantiate (pickup, transform.position + new Vector3(0, -.5f, 0), Quaternion.Euler (new Vector3 (0, 0, 0)));
 		Destroy (gameObject);

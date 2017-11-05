@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - Sunbeam
   - Enemy
+  - Sunbeam
+  - Waterbeam
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Enemy
   - Ground
   - Root Wall
-  - Sunbeam
-  - SunbeamCollider
+  - Waterbeam
+  - WaterbeamCollider
   - 
   - 
   - 

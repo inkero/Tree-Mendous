@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundLayer;
 	public Transform groundCheck;
 	public float jumpHeight = 15f;
+	public float move;
 
 	// For jump delay
 	float passedWaitTime;
@@ -100,7 +101,7 @@ public class PlayerController : MonoBehaviour {
 
 		myAnim.SetFloat ("verticalSpeed", myRB.velocity.y);
 
-		float move = Input.GetAxis ("Horizontal");
+		move = Input.GetAxis ("Horizontal");
 		myAnim.SetFloat ("speed", Mathf.Abs(move));
 
 		// Move the character
@@ -129,7 +130,7 @@ public class PlayerController : MonoBehaviour {
 			audioSource.PlayOneShot (shootSound, shootVolume);
 			audioSource.pitch = 1f;
 			if (facingRight) {
-				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0f)));
 			} else if(!facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
 			}
@@ -144,7 +145,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Sunbeam") {
+		if (other.tag == "Waterbeam") {
 			if (!(currentPower >= maxPower)) {
 				currentPower += 20;
 				audioSource.PlayOneShot (pickupSound, pickupVolume);
