@@ -9,6 +9,8 @@ public class LumberjackController : MonoBehaviour {
 	public float move;
 	public float flipDelay;
 
+	public GameObject target;
+
 	public GameObject pickup;
 
 	public float passedWaitTime;
@@ -47,6 +49,16 @@ public class LumberjackController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		if (target == null) {
+			patrol ();
+			myAnim.SetBool ("agression", false);
+		} else if (target.gameObject.tag == "Player") {
+			patrol ();
+			myAnim.SetBool ("agression", true);
+		}
+	}
+
+	void patrol(){
 		myAnim.SetFloat ("speed", Mathf.Abs(move));
 
 		// Check to see if there's ground in front of us before moving forward
@@ -69,7 +81,7 @@ public class LumberjackController : MonoBehaviour {
 				move = 0;
 				passedWaitTime = passedWaitTime + Time.deltaTime;
 
-			// When passed time reaches set delay, move to other direction and reset the timer
+				// When passed time reaches set delay, move to other direction and reset the timer
 			} else {
 				resetWalk ();
 				passedWaitTime = 0;
