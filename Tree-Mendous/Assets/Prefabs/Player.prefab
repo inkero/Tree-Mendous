@@ -408,6 +408,10 @@ MonoBehaviour:
   rootWall: {fileID: 1983643213601960, guid: e026de3dca6835841b5f020603708e42, type: 2}
   shootSound: {fileID: 8300000, guid: 6573629a20834c945af5b6fe11f6d96b, type: 3}
   shootVolume: 0.7
+  rootWallSound: {fileID: 8300000, guid: e5d99b93ac319a848908b0ef0a7d5f6b, type: 3}
+  rootWallVolume: 0.2
+  cheerSound: {fileID: 8300000, guid: e835a388db9a280449f042fcef917ffd, type: 3}
+  cheerVolume: 0.3
   jumpSound: {fileID: 8300000, guid: 36edc9b4c9c02794e8a040356ed4d20d, type: 3}
   jumpVolume: 0.4
   pickupSound: {fileID: 8300000, guid: 2003e305ce783ea4794c9e9885b9b1b3, type: 3}

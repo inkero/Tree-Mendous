@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullet;
 	float fireRate = 0.5f;
 	float nextFire = 0f;
+	int fireCount = 0;
 
 	// For casting root wall
 	public Transform rootWallMuzzle;
@@ -42,6 +43,10 @@ public class PlayerController : MonoBehaviour {
 	// For audio
 	public AudioClip shootSound;
 	public float shootVolume = 0.7f;
+	public AudioClip rootWallSound;
+	public float rootWallVolume = 0.3f;
+	public AudioClip cheerSound;
+	public float cheerVolume = 0.3f;
 	public AudioClip jumpSound;
 	public float jumpVolume = 0.7f;
 	public AudioClip pickupSound;
@@ -134,12 +139,20 @@ public class PlayerController : MonoBehaviour {
 			} else if(!facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
 			}
+
+			fireCount++;
+
+			if (fireCount >= 14) {
+				audioSource.PlayOneShot (cheerSound, cheerVolume);
+				fireCount = 0;
+			}
 		}
 	}
 
 	void createRootWall(){
 		if (Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
+			audioSource.PlayOneShot (rootWallSound, rootWallVolume);
 			Instantiate (rootWall, rootWallMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
 		}
 	}
