@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bullet;
 	float fireRate = 0.5f;
 	float nextFire = 0f;
-	int fireCount = 0;
+	int fireCount = 6;
 
 	// For casting root wall
 	public Transform rootWallMuzzle;
