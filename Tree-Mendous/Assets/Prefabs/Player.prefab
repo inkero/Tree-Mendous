@@ -400,8 +400,11 @@ MonoBehaviour:
   groundCheck: {fileID: 4979434470085586}
   jumpHeight: 15
   move: 0
+  spawnPoint: {fileID: 0}
   maxPower: 100
   currentPower: 50
+  maxHealth: 0
+  currentHealth: 0
   weaponMuzzle: {fileID: 4590061424479484}
   bullet: {fileID: 1444569071714900, guid: aba704e92997468478344f0a0a9aff77, type: 2}
   rootWallMuzzle: {fileID: 4146529691108680}
@@ -416,6 +419,8 @@ MonoBehaviour:
   jumpVolume: 0.4
   pickupSound: {fileID: 8300000, guid: 2003e305ce783ea4794c9e9885b9b1b3, type: 3}
   pickupVolume: 0.2
+  hitSound: {fileID: 0}
+  hitVolume: 0.7
 --- !u!198 &198727268267349558
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -189,11 +189,9 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator makeDead(){
 		myAnim.SetBool ("died", true);
-		yield return new WaitForSeconds (0f);
+		yield return new WaitForSeconds (0.5f);
 
-		GameObject newPlayer = Instantiate (gameObject, spawnPoint.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
-		GameObject mainCamera = GameObject.FindWithTag ("MainCamera");
-		mainCamera.GetComponent<UnityStandardAssets._2D.Camera2DFollow>().target = newPlayer.transform.GetChild(0);
+		GameObject.FindWithTag ("MainCamera").GetComponent<CustomRestarter>().StartCoroutine("Restart");
 
 		Destroy (gameObject);
 	}
