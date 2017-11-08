@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour {
 	public float pickupVolume = 0.2f;
 	public AudioClip hitSound;
 	public float hitVolume = 0.7f;
+	public AudioClip deathSound;
+	public float deathVolume = 0.7f;
 	AudioSource audioSource;
 
 
@@ -190,7 +192,7 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator makeDead(){
 		myAnim.SetBool ("died", true);
 		yield return new WaitForSeconds (0.5f);
-
+		GameObject.FindWithTag ("MainCamera").GetComponent<AudioSource>().PlayOneShot (deathSound, deathVolume);
 		GameObject.FindWithTag ("MainCamera").GetComponent<CustomRestarter>().StartCoroutine("Restart");
 
 		Destroy (gameObject);

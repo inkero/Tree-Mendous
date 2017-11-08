@@ -848,21 +848,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874408760470320}
-  m_Mesh: {fileID: 43589645925772054, guid: d6cd914ac284f0540b46d9c0917d6876, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33898592894081652
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706036216123282}
-  m_Mesh: {fileID: 43750035425028956, guid: fd129f5c41bd7f444b8ab75b4e9220cd, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!33 &33998386292101576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987377417528742}
-  m_Mesh: {fileID: 43667616161211152, guid: bff4bc2c78045714683cd428338fa780, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!50 &50074647762899466
 Rigidbody2D:
   serializedVersion: 4
@@ -895,7 +895,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10.042189, y: 1.1131783}
+  m_Offset: {x: -2.9491975, y: 1.1131783}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -906,7 +906,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.805622, y: 1.1763563}
+  m_Size: {x: 6.619639, y: 1.1763563}
   m_EdgeRadius: 0
 --- !u!61 &61741241116122024
 BoxCollider2D:
@@ -1335,6 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 114699518437325148}
+  hitSound: {fileID: 8300000, guid: 343dc2ad8a642bc4f98c15df2e9c7bc8, type: 3}
+  hitVolume: 0.7
 --- !u!114 &114494368060509468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1549,6 +1551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 114699518437325148}
+  hitSound: {fileID: 0}
+  hitVolume: 0.7
 --- !u!114 &114907127763979520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1633,7 +1637,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43784378985001496, guid: ef5dfeeb341e819488e42e87674cb07b, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4462469092188716}
   - {fileID: 4178837142996390}
