@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114699518437325148}
   - component: {fileID: 82579029805524016}
   - component: {fileID: 70028056538895738}
+  - component: {fileID: 114855322603689296}
   m_Layer: 9
   m_Name: Lumberjack
   m_TagString: Enemy
@@ -357,6 +358,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1866096781693302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4794870755198430}
+  - component: {fileID: 61741241116122024}
+  - component: {fileID: 114465524432463786}
+  m_Layer: 9
+  m_Name: DamageArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1874408760470320
 GameObject:
   m_ObjectHideFlags: 1
@@ -657,8 +675,22 @@ Transform:
   - {fileID: 4244895897530554}
   - {fileID: 4558963140421520}
   - {fileID: 4992888033913800}
+  - {fileID: 4794870755198430}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4794870755198430
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866096781693302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4786666651355586}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4897401141379052
 Transform:
@@ -875,6 +907,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 20.805622, y: 1.1763563}
+  m_EdgeRadius: 0
+--- !u!61 &61741241116122024
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866096781693302}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.890727, y: 0.0000011920929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.781454, y: 5.743773}
   m_EdgeRadius: 0
 --- !u!70 &70028056538895738
 CapsuleCollider2D:
@@ -1266,6 +1323,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4897401141379052}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114465524432463786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866096781693302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d3841dafdcf453fb9c4e11d1518cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 114699518437325148}
 --- !u!114 &114494368060509468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1364,7 +1433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMask:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294966527
   maxSpeed: 2
   move: 0
   flipDelay: 2
@@ -1468,6 +1537,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4336952599065744}
   m_AttachedIK: {fileID: 114313478229234330}
+--- !u!114 &114855322603689296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104738148775146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d3841dafdcf453fb9c4e11d1518cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 114699518437325148}
 --- !u!114 &114907127763979520
 MonoBehaviour:
   m_ObjectHideFlags: 1
