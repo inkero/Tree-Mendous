@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Waterbeam") {
 			if (!(currentPower >= maxPower)) {
-				currentPower += 20;
+				currentPower += 10;
 				audioSource.PlayOneShot (pickupSound, pickupVolume);
 				Destroy (other.gameObject);
 			}
