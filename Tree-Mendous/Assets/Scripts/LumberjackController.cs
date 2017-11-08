@@ -23,6 +23,8 @@ public class LumberjackController : MonoBehaviour {
 	public float enemyMaxHealth;
 	public float currentHealth;
 
+	public float weaponDamage = 50;
+
 	// For audio
 	public AudioClip chainsawSound;
 	public float chainsawVolume = 0.7f;
@@ -133,7 +135,7 @@ public class LumberjackController : MonoBehaviour {
 	}
 
 	public void addDamage(float damage){
-		myAnim.SetBool ("hit", true);
+		//myAnim.SetBool ("hit", true);
 		currentHealth -= damage;
 		audioSource.PlayOneShot (hitSound, hitVolume);
 

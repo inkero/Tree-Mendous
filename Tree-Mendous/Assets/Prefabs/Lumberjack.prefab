@@ -1373,6 +1373,7 @@ MonoBehaviour:
   passedWaitTime: 0
   enemyMaxHealth: 100
   currentHealth: 0
+  weaponDamage: 50
   chainsawSound: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
   chainsawVolume: 0.1
   hitSound: {fileID: 8300000, guid: c3815400414457a44acdf8e57746014b, type: 3}

@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour {
 	public float maxPower = 100f;
 	public float currentPower;
 
+	public float maxHealth;
+	public float currentHealth;
+
 	// For shooting
 	public Transform weaponMuzzle;
 	public GameObject bullet;
@@ -51,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpVolume = 0.7f;
 	public AudioClip pickupSound;
 	public float pickupVolume = 0.2f;
+	public AudioClip hitSound;
+	public float hitVolume = 0.7f;
 	AudioSource audioSource;
 
 
@@ -59,6 +64,8 @@ public class PlayerController : MonoBehaviour {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
+
+		currentHealth = maxHealth;
 
 		facingRight = true;
 	}
@@ -166,4 +173,20 @@ public class PlayerController : MonoBehaviour {
 			}
         }
     }
+
+    public void addDamage(float damage){
+		//myAnim.SetBool ("hit", true);
+		currentHealth -= damage;
+		audioSource.PlayOneShot (hitSound, hitVolume);
+
+		if (currentHealth <= 0){
+			StartCoroutine ("makeDead");
+		}
+	}
+
+	IEnumerator makeDead(){
+		myAnim.SetBool ("died", true);
+		yield return new WaitForSeconds (0.5f);
+		Destroy (gameObject);
+	}
 }
