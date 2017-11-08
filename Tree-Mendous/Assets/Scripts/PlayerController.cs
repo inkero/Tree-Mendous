@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight = 15f;
 	public float move;
 
+	// For respawn
+	public Transform spawnPoint;
+
 	// For jump delay
 	float passedWaitTime;
 	float jumpDelay = 0.2f;
@@ -186,7 +189,12 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator makeDead(){
 		myAnim.SetBool ("died", true);
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (0f);
+
+		GameObject newPlayer = Instantiate (gameObject, spawnPoint.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+		GameObject mainCamera = GameObject.FindWithTag ("MainCamera");
+		mainCamera.GetComponent<UnityStandardAssets._2D.Camera2DFollow>().target = newPlayer.transform.GetChild(0);
+
 		Destroy (gameObject);
 	}
 }
