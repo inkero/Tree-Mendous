@@ -21,6 +21,7 @@ public class CustomRestarter : MonoBehaviour {
 
 
 	IEnumerator Restart(){
+
 		yield return new WaitForSeconds(respawnTime);
 
 		GameObject newPlayer = Instantiate (player, spawnPoint.position, Quaternion.Euler (new Vector3 (0, 0, 0)));

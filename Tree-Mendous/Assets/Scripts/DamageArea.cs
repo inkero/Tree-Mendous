@@ -7,7 +7,10 @@ public class DamageArea : MonoBehaviour {
 	[SerializeField]
 	private LumberjackController enemy;
 	float timer = 0;
-	float hitPeriod = 1;
+	float hitPeriod = 1f;
+
+	public AudioClip hitSound;
+	public float hitVolume = 0.7f;
 
 	void OnTriggerStay2D(Collider2D other){
 		if(other.tag == "Player"){
@@ -19,6 +22,7 @@ public class DamageArea : MonoBehaviour {
 			if(timer >= hitPeriod){
 				timer = 0;
 				player.addDamage (enemy.weaponDamage);
+				transform.root.GetComponent<AudioSource>().PlayOneShot (hitSound, hitVolume);
 			}
 		}
 	}
