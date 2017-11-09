@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 			nextFire = Time.time + fireRate;
 			audioSource.pitch = 0.18f;
 			audioSource.PlayOneShot (shootSound, shootVolume);
+			myAnim.SetTrigger ("shoot");
 			audioSource.pitch = 1f;
 			if (facingRight) {
 				Instantiate (bullet, weaponMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0f)));
@@ -172,7 +173,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Waterbeam") {
 			if (!(currentPower >= maxPower)) {
-				currentPower += 10;
+				currentPower += 1;
 				audioSource.PlayOneShot (pickupSound, pickupVolume);
 				Destroy (other.gameObject);
 			}

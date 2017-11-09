@@ -6,7 +6,7 @@ public class ProjectileController : MonoBehaviour {
 
 	public float projectileSpeed;
 	public float weaponDamage;
-	public float verticalSpeed = .6f;
+	public float verticalSpeed = .2f;
 	public float movementMultiplier = 1.0f;
 
 	Rigidbody2D myRB;

@@ -164,9 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c759984951aec05418c3af28d01acfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  projectileSpeed: 15
   weaponDamage: 50
-  verticalSpeed: 0.6
+  verticalSpeed: 0.3
   movementMultiplier: 1.5
 --- !u!198 &198558069604581334
 ParticleSystem:
