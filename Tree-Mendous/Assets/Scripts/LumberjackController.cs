@@ -8,6 +8,7 @@ public class LumberjackController : MonoBehaviour {
 	public float maxSpeed;
 	public float move;
 	public float flipDelay;
+	public float lineCastDown = .3f;
 
 	public GameObject target;
 
@@ -77,8 +78,8 @@ public class LumberjackController : MonoBehaviour {
 
 		// Check to see if there's ground in front of us before moving forward
 		Vector2 lineCastPos = transform.position - transform.up * myHeight - transform.right * myWidth;
-		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * .3f);
-		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down * .3f, enemyMask);
+		Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down * lineCastDown);
+		bool isGrounded = Physics2D.Linecast (lineCastPos, lineCastPos + Vector2.down * lineCastDown, enemyMask);
 
 		// Check if there's a wall
 		Vector2 lineCastPos2 = transform.position - transform.up * myHeight - transform.right * myWidth;
