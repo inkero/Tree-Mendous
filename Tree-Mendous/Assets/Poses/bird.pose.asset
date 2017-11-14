@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: bird.pose
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Colonne
+    localPosition: {x: 1.5583344, y: -0.9321728, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9255879, w: -0.37853277}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Head
+    localPosition: {x: 3.0000243, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.4466863, w: 0.8946907}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Tail
+    localPosition: {x: -0.4340166, y: -0.461073, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9773505, w: 0.2116273}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Colonne/Wing
+    localPosition: {x: 1.1535337, y: -0.5016444, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.62257737, w: 0.7825583}
+    localScale: {x: 1, y: 1, z: 1}
