@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446046558204370}
   - component: {fileID: 114085145257411494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colonne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4747297824575116}
   - component: {fileID: 114022615449735912}
   - component: {fileID: 137721043128338472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160248827275852}
   - component: {fileID: 114967571651170848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leg L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989049873098706}
   - component: {fileID: 114812043705579854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4752119443347356}
   - component: {fileID: 114175381102803764}
   - component: {fileID: 137736814437151050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lefthand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4854427387062494}
   - component: {fileID: 114547691469411256}
   - component: {fileID: 137149476825988484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4866866450409462}
   - component: {fileID: 114982705102587362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4878670837007982}
   - component: {fileID: 114694195999072756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Leg L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,9 +152,12 @@ GameObject:
   - component: {fileID: 4017546831197162}
   - component: {fileID: 114046545610821170}
   - component: {fileID: 95425042942902318}
-  m_Layer: 0
+  - component: {fileID: 50411439423898694}
+  - component: {fileID: 70215569576845860}
+  - component: {fileID: 114511624230502022}
+  m_Layer: 9
   m_Name: Beaver
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4489768690228900}
   - component: {fileID: 114074492233913162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +188,7 @@ GameObject:
   - component: {fileID: 4140167507949136}
   - component: {fileID: 114259810111783610}
   - component: {fileID: 137622647475187480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +205,7 @@ GameObject:
   - component: {fileID: 4408547404683392}
   - component: {fileID: 114622117528998944}
   - component: {fileID: 137634777987359738}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lefthand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +222,7 @@ GameObject:
   - component: {fileID: 4177782889528054}
   - component: {fileID: 114356200932166118}
   - component: {fileID: 137359567681524256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991554105708318}
   - component: {fileID: 114560463773697792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +255,7 @@ GameObject:
   - component: {fileID: 4337302625465864}
   - component: {fileID: 114234978371108158}
   - component: {fileID: 137913328246966420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,8 +269,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514134125271046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.82, y: 0.55, z: 0.25}
-  m_LocalScale: {x: 0.101076424, y: 0.10107644, z: 0.10107644}
+  m_LocalPosition: {x: 104.59811, y: 28.250776, z: 0.25}
+  m_LocalScale: {x: 0.27053797, y: 0.27053803, z: 0.27053803}
   m_Children:
   - {fileID: 4446046558204370}
   m_Father: {fileID: 0}
@@ -468,6 +471,41 @@ Transform:
   m_Father: {fileID: 4446046558204370}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 124.50201}
+--- !u!50 &50411439423898694
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514134125271046}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &70215569576845860
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514134125271046}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.8375236, y: 3.3803406}
+  m_Size: {x: 5.0317326, y: 10.290987}
+  m_Direction: 0
 --- !u!95 &95425042942902318
 Animator:
   serializedVersion: 3
@@ -546,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 5.0000014
+  m_Length: 5.0000005
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4989049873098706}
   m_AttachedIK: {fileID: 0}
@@ -630,6 +668,32 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4446046558204370}
+--- !u!114 &114511624230502022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514134125271046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b5567e401404870818beab5d856bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
+  maxSpeed: 2
+  move: 0
+  flipDelay: 2
+  lineCastDown: 0.7
+  target: {fileID: 0}
+  pickup: {fileID: 1427120232152102, guid: 2d9f1784bfe521d47a80760210b279d4, type: 2}
+  passedWaitTime: 0
+  enemyMaxHealth: 50
+  currentHealth: 0
+  weaponDamage: 40
+  hitSound: {fileID: 0}
+  hitVolume: 0.7
 --- !u!114 &114547691469411256
 MonoBehaviour:
   m_ObjectHideFlags: 1
