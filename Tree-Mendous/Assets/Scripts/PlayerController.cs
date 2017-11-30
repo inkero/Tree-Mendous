@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	public float jumpHeight = 15f;
 	public float move;
+	public bool knockedBack = false;
 
 	// For respawn
 	public Transform spawnPoint;
@@ -121,8 +122,14 @@ public class PlayerController : MonoBehaviour {
 		move = Input.GetAxis ("Horizontal");
 		myAnim.SetFloat ("speed", Mathf.Abs(move));
 
+		if(grounded){
+			knockedBack = false;
+		}
+
 		// Move the character
-		myRB.velocity = new Vector2 (move * maxSpeed, myRB.velocity.y);
+		if(!knockedBack){
+			myRB.velocity = new Vector2 (move * maxSpeed, myRB.velocity.y);
+		}
 
 		// If we move right & the character is not facing right, flip
 		if(move>0 && !facingRight){
@@ -184,6 +191,14 @@ public class PlayerController : MonoBehaviour {
 		//myAnim.SetBool ("hit", true);
 		currentHealth -= damage;
 		audioSource.PlayOneShot (hitSound, hitVolume);
+		//myRB.AddForce (new Vector2 (0, 10f), ForceMode2D.Impulse);
+		//float originalGS = myRB.gravityScale;
+		//myRB.gravityScale = 0;
+
+		knockedBack = true;
+		myRB.velocity = new Vector2 (-10f, 10f);
+		//myRB.gravityScale = originalGS;
+
 
 		if (currentHealth <= 0){
 			StartCoroutine ("makeDead");

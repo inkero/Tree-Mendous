@@ -1446,9 +1446,7 @@ MonoBehaviour:
   enemyMaxHealth: 100
   currentHealth: 0
   weaponDamage: 50
-  chainsawSound: {fileID: 8300000, guid: 6883484c3a2ade64b9b94b244d93284f, type: 3}
-  chainsawVolume: 0.1
-  hitSound: {fileID: 8300000, guid: c3815400414457a44acdf8e57746014b, type: 3}
+  hitSound: {fileID: 8300000, guid: fd30914ceffd6554f901ef691b704be6, type: 3}
   hitVolume: 0.7
 --- !u!114 &114715455972701764
 MonoBehaviour:
@@ -1552,7 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 114699518437325148}
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 343dc2ad8a642bc4f98c15df2e9c7bc8, type: 3}
   hitVolume: 0.7
 --- !u!114 &114907127763979520
 MonoBehaviour:
