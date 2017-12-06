@@ -302,8 +302,9 @@ public class PlayerController : MonoBehaviour {
 			StartCoroutine ("makeDead");
 		}
 	}
-
+    
 	IEnumerator makeDead(){
+        Debug.Log("asd");
 		myAnim.SetBool ("died", true);
 		yield return new WaitForSeconds (0.5f);
 		//GameObject.FindWithTag ("MainCamera").GetComponent<AudioSource>().PlayOneShot (deathSound, deathVolume);
