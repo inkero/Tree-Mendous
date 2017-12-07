@@ -439,7 +439,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102188140261682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 99.82, y: 28.858665, z: 0.25}
+  m_LocalPosition: {x: 96.72, y: 31.32, z: 0.25}
   m_LocalScale: {x: 0.29932195, y: 0.29932195, z: 0.29932195}
   m_Children:
   - {fileID: 4707795256213618}
@@ -1236,11 +1236,21 @@ MonoBehaviour:
   groundCheck: {fileID: 4483986829036406}
   jumpHeight: 15
   move: 0
+  knockedBack: 0
   spawnPoint: {fileID: 0}
   maxPower: 100
   currentPower: 0
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
+  heart1: {fileID: 1647522499274296, guid: 69c12aa0288d4a74db065c53e62a5fd5, type: 2}
+  heart2: {fileID: 1408933473664146, guid: 1ad595b315e2cb64892759054172dcea, type: 2}
+  heart3: {fileID: 1495245788506806, guid: 491b4e31c05178e41945c1c2cb57c818, type: 2}
+  heart4: {fileID: 1201328395308926, guid: 2da133bc17d0fb24695dd7a93b032def, type: 2}
+  energy1: {fileID: 1839083863740470, guid: 77d57ddebab983b45bd014d24e3723c9, type: 2}
+  energy2: {fileID: 1576915822728106, guid: 8ce8a497ce6dfd9478490a5650b50ca6, type: 2}
+  energy3: {fileID: 1297406558133026, guid: 03fed96746ab8db47b60f8dbec3068d5, type: 2}
+  energy4: {fileID: 1899289542277852, guid: 4cf0e08bed45cfb4dae88946edfc4f25, type: 2}
+  energy5: {fileID: 1269100281635566, guid: 4f650176f4116c544acffa4e148a72a1, type: 2}
   weaponMuzzle: {fileID: 4051518819229746}
   bullet: {fileID: 1444569071714900, guid: aba704e92997468478344f0a0a9aff77, type: 2}
   rootWallMuzzle: {fileID: 4612687750397526}
@@ -1364,7 +1374,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43411281740026686, guid: 4388d2e4dc2cd7341a076f76302ea859, type: 2}
   m_Bones:
   - {fileID: 4273224599812276}
   - {fileID: 4203656482723120}
@@ -1413,7 +1423,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43863325363958550, guid: e492d5fb608cdac4cb0de014dc492371, type: 2}
   m_Bones:
   - {fileID: 4878711039763920}
   - {fileID: 4376943674507472}
@@ -1459,7 +1469,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43825766359134162, guid: e15bcdd0d48924b41b6b4fe3eb6ff365, type: 2}
   m_Bones:
   - {fileID: 4742722753290102}
   - {fileID: 4266638391263244}
@@ -1505,7 +1515,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43241401789729564, guid: 8eac10efd4f305a45add7bfd4b257e29, type: 2}
   m_Bones:
   - {fileID: 4794017678948154}
   - {fileID: 4473014595843524}

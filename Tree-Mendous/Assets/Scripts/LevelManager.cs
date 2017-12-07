@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+    public GameObject LevelSelect;
+
     public void StartBtn(string GameLevel)
     {
-        SceneManager.LoadScene(GameLevel);
+        LevelSelect.gameObject.SetActive(true);
     } 
     public void ExitBtn()
     {
         Application.Quit();
+    }
+    public void LevelBtn(string GameLevel)
+    {
+        SceneManager.LoadScene(GameLevel);
     }
 }

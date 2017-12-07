@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour {
 	public float maxHealth;
 	public float currentHealth;
 
+    //For HUD
+    public GameObject heart1, heart2, heart3, heart4, energy1, energy2, energy3, energy4, energy5;
+
 	// For shooting
 	public Transform weaponMuzzle;
 	public GameObject bullet;
@@ -65,13 +68,23 @@ public class PlayerController : MonoBehaviour {
 	AudioSource audioSource;
 
 
+
 	// Use this for initialization
 	void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
 
-		currentHealth = maxHealth;
+        currentHealth = maxHealth;
+        heart1.gameObject.SetActive(true);
+        heart2.gameObject.SetActive(true);
+        heart3.gameObject.SetActive(true);
+        heart4.gameObject.SetActive(true);
+        energy1.gameObject.SetActive(true);
+        energy2.gameObject.SetActive(true);
+        energy3.gameObject.SetActive(true);
+        energy4.gameObject.SetActive(true);
+        energy5.gameObject.SetActive(true);
 
 		facingRight = true;
 	}
@@ -85,9 +98,94 @@ public class PlayerController : MonoBehaviour {
 			myRB.AddForce (new Vector2 (0, jumpHeight), ForceMode2D.Impulse);
 			audioSource.PlayOneShot (jumpSound, jumpVolume);
 		}
+        if (currentHealth == 100f)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(true);
+            heart3.gameObject.SetActive(true);
+            heart4.gameObject.SetActive(true);
+        }
+        if (currentHealth == 75f)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(true);
+            heart3.gameObject.SetActive(true);
+            heart4.gameObject.SetActive(false);
+        }
+        if (currentHealth == 50f)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(true);
+            heart3.gameObject.SetActive(false);
+            heart4.gameObject.SetActive(false);
+        }
+        if (currentHealth == 25f)
+        {
+            heart1.gameObject.SetActive(true);
+            heart2.gameObject.SetActive(false);
+            heart3.gameObject.SetActive(false);
+            heart4.gameObject.SetActive(false);
+        }
+        if (currentHealth == 0)
+        {
+            heart1.gameObject.SetActive(false);
+            heart2.gameObject.SetActive(false);
+            heart3.gameObject.SetActive(false);
+            heart4.gameObject.SetActive(false);
+        }
 
-		// Player shooting
-		if (Input.GetAxisRaw ("Fire1") > 0) {
+        if (currentPower == 100f)
+        {
+            energy1.gameObject.SetActive(true);
+            energy2.gameObject.SetActive(true);
+            energy3.gameObject.SetActive(true);
+            energy4.gameObject.SetActive(true);
+            energy5.gameObject.SetActive(true);
+        }
+        if (currentPower == 80f)
+        {
+            energy1.gameObject.SetActive(true);
+            energy2.gameObject.SetActive(true);
+            energy3.gameObject.SetActive(true);
+            energy4.gameObject.SetActive(true);
+            energy5.gameObject.SetActive(false);
+        }
+        if (currentPower == 60f)
+        {
+            energy1.gameObject.SetActive(true);
+            energy2.gameObject.SetActive(true);
+            energy3.gameObject.SetActive(true);
+            energy4.gameObject.SetActive(false);
+            energy5.gameObject.SetActive(false);
+        }
+        if (currentPower == 40f)
+        {
+            energy1.gameObject.SetActive(true);
+            energy2.gameObject.SetActive(true);
+            energy3.gameObject.SetActive(false);
+            energy4.gameObject.SetActive(false);
+            energy5.gameObject.SetActive(false);
+        }
+        if (currentPower == 20f)
+        {
+            energy1.gameObject.SetActive(true);
+            energy2.gameObject.SetActive(false);
+            energy3.gameObject.SetActive(false);
+            energy4.gameObject.SetActive(false);
+            energy5.gameObject.SetActive(false);
+        }
+        if (currentPower == 0)
+        {
+            energy1.gameObject.SetActive(false);
+            energy2.gameObject.SetActive(false);
+            energy3.gameObject.SetActive(false);
+            energy4.gameObject.SetActive(false);
+            energy5.gameObject.SetActive(false);
+        }
+
+
+        // Player shooting
+        if (Input.GetAxisRaw ("Fire1") > 0) {
 			fire ();
 		}
 
@@ -180,7 +278,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Waterbeam") {
 			if (!(currentPower >= maxPower)) {
-				currentPower += 1;
+				currentPower += 20;
 				audioSource.PlayOneShot (pickupSound, pickupVolume);
 				Destroy (other.gameObject);
 			}
@@ -204,13 +302,13 @@ public class PlayerController : MonoBehaviour {
 			StartCoroutine ("makeDead");
 		}
 	}
-
+    
 	IEnumerator makeDead(){
 		myAnim.SetBool ("died", true);
 		yield return new WaitForSeconds (0.5f);
-		GameObject.FindWithTag ("MainCamera").GetComponent<AudioSource>().PlayOneShot (deathSound, deathVolume);
+		//GameObject.FindWithTag ("MainCamera").GetComponent<AudioSource>().PlayOneShot (deathSound, deathVolume);
 		GameObject.FindWithTag ("MainCamera").GetComponent<CustomRestarter>().StartCoroutine("Restart");
 
-		Destroy (gameObject);
+
 	}
 }
