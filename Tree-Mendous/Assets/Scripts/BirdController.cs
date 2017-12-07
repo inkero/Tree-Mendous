@@ -12,6 +12,8 @@ public class BirdController : MonoBehaviour {
 	public float verticalDir;
 	public float forceCount = 0;
 	public float maxForceCount = 130;
+	public float countBeforeTurnCurrent = 0;
+	public float countBeforeTurn = 100;
 	float maxForceCountDoubled;
 
 	// Use this for initialization
@@ -29,9 +31,9 @@ public class BirdController : MonoBehaviour {
 		myRB.velocity = new Vector2 (move * speed, myRB.velocity.y);
 
 		if(verticalDir == 1){
-			myRB.AddForce(transform.up);
+			myRB.AddForce(transform.up * 4);
 		} else if(verticalDir == -1){
-			myRB.AddForce(-transform.up);
+			myRB.AddForce(-transform.up * 4);
 		}
 
 		forceCount++;
@@ -41,5 +43,19 @@ public class BirdController : MonoBehaviour {
 			verticalDir = -verticalDir;
 			maxForceCount = maxForceCountDoubled;
 		}
+
+		if (countBeforeTurnCurrent >= countBeforeTurn) {
+			flip ();
+			move = -move;
+			countBeforeTurnCurrent = 0;
+		}
+
+		countBeforeTurnCurrent++;
+	}
+
+	void flip(){
+		Vector3 enemyRotation = transform.eulerAngles;
+		enemyRotation.y += 180; // Same as: theScale.x = theScale.x * -1
+		transform.eulerAngles = enemyRotation;
 	}
 }

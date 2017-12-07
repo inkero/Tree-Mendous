@@ -28,6 +28,8 @@ public abstract class GroundEnemy : MonoBehaviour {
 
 	public AudioClip hitSound;
 	public float hitVolume = 0.7f;
+	public AudioClip deathSound;
+	public float deathVolume = 0.7f;
 
 	// Use this for initialization
 	void Start () {
@@ -143,6 +145,7 @@ public abstract class GroundEnemy : MonoBehaviour {
 
 	IEnumerator makeDead(){
 		myAnim.SetBool ("died", true);
+		audioSource.PlayOneShot (deathSound, deathVolume);
 		yield return new WaitForSeconds (0.5f);
 		Instantiate (pickup, transform.position + new Vector3(0, -.5f, 0), Quaternion.Euler (new Vector3 (0, 0, 0)));
 		Destroy (gameObject);

@@ -1448,6 +1448,8 @@ MonoBehaviour:
   weaponDamage: 50
   hitSound: {fileID: 8300000, guid: fd30914ceffd6554f901ef691b704be6, type: 3}
   hitVolume: 0.7
+  deathSound: {fileID: 8300000, guid: c3815400414457a44acdf8e57746014b, type: 3}
+  deathVolume: 0.7
 --- !u!114 &114715455972701764
 MonoBehaviour:
   m_ObjectHideFlags: 1
