@@ -268,10 +268,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void createRootWall(){
-		if (Time.time > nextFire) {
+		if (Time.time > nextFire && currentPower > 0) {
 			nextFire = Time.time + fireRate;
 			audioSource.PlayOneShot (rootWallSound, rootWallVolume);
 			Instantiate (rootWall, rootWallMuzzle.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+			currentPower = currentPower - 20;
 		}
 	}
 
@@ -292,6 +293,8 @@ public class PlayerController : MonoBehaviour {
 		//myRB.AddForce (new Vector2 (0, 10f), ForceMode2D.Impulse);
 		//float originalGS = myRB.gravityScale;
 		//myRB.gravityScale = 0;
+
+		myAnim.SetBool ("hit", true);
 
 		knockedBack = true;
 		myRB.velocity = new Vector2 (-10f, 10f);
