@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextLevel : MonoBehaviour {
 
+	public int LevelSelect;
+
 	void OnTriggerEnter2D(){
-		SceneManager.LoadScene("Main Menu");
+		SceneManager.LoadScene(LevelSelect);
 	}
 }
