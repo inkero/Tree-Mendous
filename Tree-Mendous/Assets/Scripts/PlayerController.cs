@@ -297,7 +297,7 @@ public class PlayerController : MonoBehaviour {
 		myAnim.SetBool ("hit", true);
 
 		knockedBack = true;
-		myRB.velocity = new Vector2 (-10f, 10f);
+		myRB.velocity = new Vector2 (0, 10f);
 		//myRB.gravityScale = originalGS;
 
 
