@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Sunbeam
   - Waterbeam
+  - Edge
   layers:
   - Default
   - TransparentFX
