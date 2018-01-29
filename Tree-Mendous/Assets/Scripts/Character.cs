@@ -36,6 +36,7 @@ public abstract class Character : MonoBehaviour {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
+    /*
     public virtual void ThrowKnife(int value)
     {
         if (facingRight)
@@ -49,4 +50,6 @@ public abstract class Character : MonoBehaviour {
             tmp.GetComponent<Knife>().Initialize(Vector2.left);
         }
     }
+    */
+    
 }

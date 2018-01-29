@@ -21,6 +21,11 @@ public class IdleState : ILumberjackState
         Debug.Log("Idling");
 
         Idle();
+
+        if(lumberjack.Target != null)
+        {
+            lumberjack.ChangeState(new PatrolState());
+        }
     }
 
     public void Exit()

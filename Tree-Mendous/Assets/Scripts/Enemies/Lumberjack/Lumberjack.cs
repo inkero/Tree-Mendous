@@ -6,6 +6,8 @@ public class Lumberjack : Character {
 
     private ILumberjackState currentState;
 
+    public GameObject Target { get; set; }
+
 	// Use this for initialization
 	public override void Start () {
         base.Start();
@@ -16,7 +18,22 @@ public class Lumberjack : Character {
 	// Update is called once per frame
 	void Update () {
         currentState.Execute();
+
+        LookAtTarget();
 	}
+
+    private void LookAtTarget()
+    {
+        if(Target != null)
+        {
+            float xDir = Target.transform.position.x - transform.position.x;
+
+            if(xDir < 0 && facingRight || xDir > 0 && !facingRight)
+            {
+                ChangeDirection();
+            }
+        }
+    }
 
     public void ChangeState(ILumberjackState newState)
     {
@@ -32,9 +49,12 @@ public class Lumberjack : Character {
 
     public void Move()
     {
-        MyAnimator.SetFloat("speed", 1);
+        if (!Attack) {
+            MyAnimator.SetFloat("speed", 1);
 
-        transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
+            transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime));
+        }
+        
     }
 
     public Vector2 GetDirection()

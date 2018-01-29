@@ -21,6 +21,11 @@ public class PatrolState : ILumberjackState
         Debug.Log("Patrolling");
 
         Patrol();
+
+        if(lumberjack.Target != null)
+        {
+            lumberjack.ChangeState(new RangedState());
+        }
     }
 
     public void Exit()
