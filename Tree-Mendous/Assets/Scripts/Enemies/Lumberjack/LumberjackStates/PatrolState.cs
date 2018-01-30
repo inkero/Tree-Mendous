@@ -22,7 +22,11 @@ public class PatrolState : ILumberjackState
 
         Patrol();
 
-        if(lumberjack.Target != null)
+        if(lumberjack.Target != null && lumberjack.slashing)
+        {
+            lumberjack.ChangeState(new MeleeState());
+        }
+        else if (lumberjack.Target != null)
         {
             lumberjack.ChangeState(new RangedState());
         }
@@ -44,9 +48,9 @@ public class PatrolState : ILumberjackState
     private void Patrol()
     {
 
-        patrolTimer += Time.deltaTime;
-
         lumberjack.Move();
+
+        patrolTimer += Time.deltaTime;
 
         if (patrolTimer >= patrolDuration)
         {

@@ -19,7 +19,7 @@ public class RangedState : ILumberjackState
     {
         ThrowAxe();
 
-        if (lumberjack.Target != null)
+        if(lumberjack.Target != null && !lumberjack.slashing)
         {
             lumberjack.Move();
         }

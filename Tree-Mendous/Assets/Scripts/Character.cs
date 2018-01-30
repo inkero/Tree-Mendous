@@ -36,20 +36,25 @@ public abstract class Character : MonoBehaviour {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    /*
-    public virtual void ThrowKnife(int value)
+    
+    public virtual void ThrowAxe(int value)
     {
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0,0,-90)));
-            tmp.GetComponent<Knife>().Initialize(Vector2.right);
+            //tmp.GetComponent<Knife>().Initialize(Vector2.right);
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
-            tmp.GetComponent<Knife>().Initialize(Vector2.left);
+            //tmp.GetComponent<Knife>().Initialize(Vector2.left);
         }
     }
-    */
-    
+
+    public virtual void Slash(int value)
+    {
+        Debug.Log("Ouch!");
+    }
+
+
 }

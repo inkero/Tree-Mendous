@@ -7,9 +7,10 @@ public class Lumberjack : Character {
     private ILumberjackState currentState;
 
     public GameObject Target { get; set; }
+    public bool slashing = false;
 
-	// Use this for initialization
-	public override void Start () {
+    // Use this for initialization
+    public override void Start () {
         base.Start();
         facingRight = false;
         ChangeState(new IdleState());
@@ -43,6 +44,8 @@ public class Lumberjack : Character {
         }
 
         currentState = newState;
+
+        Debug.Log("State: " + currentState);
 
         currentState.Enter(this);
     }

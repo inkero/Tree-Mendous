@@ -13,13 +13,16 @@ public class MeleeState : ILumberjackState
 
     public void Execute()
     {
-        if (lumberjack.Target != null)
+
+        
+        if (lumberjack.slashing)
         {
-            lumberjack.Move();
+            Slash();
+            lumberjack.Attack = true;
         }
-        else
-        {
-            lumberjack.ChangeState(new IdleState());
+        else { 
+            lumberjack.ChangeState(new RangedState());
+            lumberjack.Attack = false;
         }
     }
 
@@ -31,5 +34,11 @@ public class MeleeState : ILumberjackState
     public void OnTriggerEnter(Collider2D other)
     {
         
+    }
+
+    private void Slash()
+    {
+        lumberjack.MyAnimator.SetFloat("speed", 0);
+        lumberjack.MyAnimator.SetBool("attack", true);
     }
 }
