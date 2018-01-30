@@ -41,11 +41,21 @@ public abstract class Character : MonoBehaviour {
         if (facingRight)
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0,0,-90)));
+
+            Animation anim = tmp.transform.GetChild(0).GetComponent<Animation>();
+
+            anim.Play("AxeSpinRight");
+
             //tmp.GetComponent<Knife>().Initialize(Vector2.right);
         }
         else
         {
             GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+
+            Animation anim = tmp.transform.GetChild(0).GetComponent<Animation>();
+
+            anim.Play("AxeSpinLeft");
+            
             //tmp.GetComponent<Knife>().Initialize(Vector2.left);
         }
     }
