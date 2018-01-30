@@ -6,6 +6,9 @@ public class Lumberjack : Character {
 
     private ILumberjackState currentState;
 
+    public float chargeSpeed;
+    public float originalMovementSpeed { get; set; }
+
     public GameObject Target { get; set; }
     public bool slashing = false;
 
@@ -14,6 +17,8 @@ public class Lumberjack : Character {
         base.Start();
         facingRight = false;
         ChangeState(new IdleState());
+
+        originalMovementSpeed = movementSpeed;
 	}
 	
 	// Update is called once per frame

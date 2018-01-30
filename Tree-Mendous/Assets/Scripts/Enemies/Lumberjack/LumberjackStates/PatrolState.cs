@@ -9,7 +9,7 @@ public class PatrolState : ILumberjackState
 
     private float patrolTimer;
 
-    private float patrolDuration = 10;
+    private float patrolDuration = 4;
 
     public void Enter(Lumberjack lumberjack)
     {

@@ -13,6 +13,8 @@ public class RangedState : ILumberjackState
     public void Enter(Lumberjack lumberjack)
     {
         this.lumberjack = lumberjack;
+        lumberjack.movementSpeed = lumberjack.chargeSpeed;
+        lumberjack.GetComponent<Animator>().speed = 1.5f;
     }
 
     public void Execute()
@@ -31,7 +33,8 @@ public class RangedState : ILumberjackState
 
     public void Exit()
     {
-
+        lumberjack.movementSpeed = lumberjack.originalMovementSpeed;
+        lumberjack.GetComponent<Animator>().speed = 1f;
     }
 
     public void OnTriggerEnter(Collider2D other)

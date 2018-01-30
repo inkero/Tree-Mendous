@@ -9,7 +9,7 @@ public class IdleState : ILumberjackState
 
     private float idleTimer;
 
-    private float idleDuration = 5;
+    private float idleDuration = 2;
 
     public void Enter(Lumberjack lumberjack)
     {

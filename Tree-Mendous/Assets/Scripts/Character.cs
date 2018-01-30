@@ -7,8 +7,7 @@ public abstract class Character : MonoBehaviour {
     [SerializeField]
     protected Transform knifePos;
 
-    [SerializeField]
-    protected float movementSpeed;
+    public float movementSpeed;
 
     protected bool facingRight;
 
