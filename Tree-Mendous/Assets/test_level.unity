@@ -1956,7 +1956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lumberjack: {fileID: 1232570122}
   viewRadius: 13
-  viewAngle: 63
+  viewAngle: 44
   targetsInViewRadius: []
   visibleTargets: []
   targetMask:
@@ -2006,7 +2006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &795560686
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,7 +2053,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 44132a5a11778704399564ff2138d3b1, type: 3}
-  m_Color: {r: 0.7058823, g: 0.7058823, b: 0.7058823, a: 1}
+  m_Color: {r: 0.77205884, g: 0.77205884, b: 0.77205884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -2995,7 +2995,12 @@ Prefab:
     - target: {fileID: 114898130098428560, guid: 50c1e10d2a60c264eb104eb1df0ba694,
         type: 2}
       propertyPath: currentPower
-      value: 100
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898130098428560, guid: 50c1e10d2a60c264eb104eb1df0ba694,
+        type: 2}
+      propertyPath: maxPower
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50c1e10d2a60c264eb104eb1df0ba694, type: 2}
@@ -4807,7 +4812,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91635cce076be420ea5217ef12817666, type: 3}
-  m_Color: {r: 0.8161765, g: 1, b: 0.8174442, a: 1}
+  m_Color: {r: 0.625, g: 1, b: 0.6275862, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
