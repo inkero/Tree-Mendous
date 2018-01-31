@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour {
     }
     public void LevelBtn(string GameLevel)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(GameLevel);
     }
 }
