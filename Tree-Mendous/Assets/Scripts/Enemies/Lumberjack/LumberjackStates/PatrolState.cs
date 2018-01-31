@@ -18,7 +18,7 @@ public class PatrolState : ILumberjackState
 
     public void Execute()
     {
-        Debug.Log("Patrolling");
+        //Debug.Log("Patrolling");
 
         Patrol();
 

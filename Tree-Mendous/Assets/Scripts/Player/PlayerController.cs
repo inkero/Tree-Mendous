@@ -268,6 +268,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void createRootWall(){
+        Debug.Log("Placing rootwall");
 		if (Time.time > nextFire && currentPower > 0) {
 			nextFire = Time.time + fireRate;
 			audioSource.PlayOneShot (rootWallSound, rootWallVolume);

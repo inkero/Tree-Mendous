@@ -51,10 +51,10 @@ public abstract class GroundEnemy : MonoBehaviour {
 	void FixedUpdate () {
 		if (target == null) {
 			patrol ();
-			myAnim.SetBool ("agression", false);
+			//myAnim.SetBool ("agression", false);
 		} else if (target.gameObject.tag == "Player") {
 			patrol ();
-			myAnim.SetBool ("agression", true);
+			//myAnim.SetBool ("agression", true);
 		}
 	}
 

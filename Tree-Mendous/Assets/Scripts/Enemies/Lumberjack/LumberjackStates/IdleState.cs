@@ -18,7 +18,7 @@ public class IdleState : ILumberjackState
 
     public void Execute()
     {
-        Debug.Log("Idling");
+        //Debug.Log("Idling");
 
         Idle();
 

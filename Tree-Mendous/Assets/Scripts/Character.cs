@@ -9,7 +9,8 @@ public abstract class Character : MonoBehaviour {
 
     public float movementSpeed;
 
-    protected bool facingRight;
+    [HideInInspector]
+    public bool facingRight;
 
     [SerializeField]
     private GameObject knifePrefab;
