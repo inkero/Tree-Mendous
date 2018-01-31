@@ -1920,7 +1920,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 783269913}
-  - component: {fileID: 783269915}
   - component: {fileID: 783269914}
   m_Layer: 0
   m_Name: Sight
@@ -1937,7 +1936,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 783269912}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1232570130}
@@ -1956,7 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lumberjack: {fileID: 1232570122}
   viewRadius: 13
-  viewAngle: 44
+  viewAngle: 25
   targetsInViewRadius: []
   visibleTargets: []
   targetMask:
@@ -1965,32 +1964,6 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 3072
---- !u!61 &783269915
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 61532353374763458, guid: 2c343a9fe614dda42bd85fbcfa71d01b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 783269912}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -5.677614, y: 0.72671294}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 44.119213, y: 3.62987}
-  m_EdgeRadius: 0
 --- !u!1 &795560685
 GameObject:
   m_ObjectHideFlags: 0
