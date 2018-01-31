@@ -3273,9 +3273,56 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223610237175058396, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114841128000693718, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1566219430}
+    - target: {fileID: 114841128000693718, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850601556574208, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1566219429}
+    - target: {fileID: 114850601556574208, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154158295994338, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1566219429}
+    - target: {fileID: 114154158295994338, guid: 2c669527219d21c4a96565121b4287f2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitBtn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c669527219d21c4a96565121b4287f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1566219429 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114801472265533590, guid: 2c669527219d21c4a96565121b4287f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1566219428}
+  m_Script: {fileID: 11500000, guid: 1b6e355fe5d716b4a9d5cf57e7932805, type: 3}
+--- !u!114 &1566219430 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114276751004720018, guid: 2c669527219d21c4a96565121b4287f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1566219428}
+  m_Script: {fileID: 11500000, guid: 332d12a4d7653e54e8a9f0300935af1e, type: 3}
 --- !u!1 &1577776979
 GameObject:
   m_ObjectHideFlags: 0
