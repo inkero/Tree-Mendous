@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114065986229844690}
   - component: {fileID: 114041270940009010}
   - component: {fileID: 114425718918301022}
+  - component: {fileID: 114434477660772964}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -800,6 +801,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1198718883995646}
+--- !u!114 &114434477660772964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006661481325998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6e355fe5d716b4a9d5cf57e7932805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelSelect: {fileID: 1198718883995646}
 --- !u!114 &114484468164116638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -907,7 +920,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114434477660772964}
         m_MethodName: ExitBtn
         m_Mode: 1
         m_Arguments:
@@ -1052,7 +1065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114434477660772964}
         m_MethodName: LevelBtn
         m_Mode: 5
         m_Arguments:
@@ -1230,7 +1243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114425718918301022}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
