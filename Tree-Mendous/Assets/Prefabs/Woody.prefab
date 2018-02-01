@@ -439,7 +439,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102188140261682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.79, y: 34.29, z: 0.25}
+  m_LocalPosition: {x: 97.17, y: 30.62, z: 0.25}
   m_LocalScale: {x: 0.29932195, y: 0.29932195, z: 0.29932195}
   m_Children:
   - {fileID: 4707795256213618}
@@ -474,7 +474,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501988977125888}
-  m_LocalRotation: {x: 0, y: 0, z: -0.364471, w: 0.93121475}
+  m_LocalRotation: {x: 0, y: 0, z: -0.36447743, w: 0.93121225}
   m_LocalPosition: {x: 1.6000006, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -506,7 +506,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1580498516231822}
-  m_LocalRotation: {x: 0, y: 0, z: 0.69343936, w: 0.720515}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6934402, w: 0.7205142}
   m_LocalPosition: {x: 4.000087, y: 0.000000022569566, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -585,7 +585,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1527018391606474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -1.83, z: -0.8352211}
+  m_LocalPosition: {x: 0.2, y: -1.83, z: -0.8352211}
   m_LocalScale: {x: 3.3408844, y: 3.3408844, z: 3.3408844}
   m_Children: []
   m_Father: {fileID: 4086392738696840}
@@ -611,7 +611,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153842049366916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.64, y: -0.01, z: -0.8352211}
+  m_LocalPosition: {x: 0.97, y: -0.01, z: -0.8352211}
   m_LocalScale: {x: 3.3408844, y: 3.3408844, z: 3.3408844}
   m_Children: []
   m_Father: {fileID: 4086392738696840}
@@ -636,7 +636,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331933280135080}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.000004128614}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.0000019828465}
   m_LocalPosition: {x: 4.4015985, y: 0.87550354, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -692,7 +692,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584802589770324}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0029142597, w: 0.99999577}
+  m_LocalRotation: {x: 0, y: 0, z: -0.002914293, w: 0.99999577}
   m_LocalPosition: {x: 5.0000005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -942,16 +942,16 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4742722753290102}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 1, w: 0.000004128614}
+      solverRotation: {x: 0, y: 0, z: 1, w: 0.0000019828465}
       defaultLocalRotation: {x: -0, y: -0, z: -1, w: 0.000000119209275}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4266638391263244}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.364471, w: 0.93121475}
+      solverRotation: {x: 0, y: 0, z: -0.36447743, w: 0.93121225}
       defaultLocalRotation: {x: 0, y: 0, z: -0.36447993, w: 0.93121123}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 111.49949, y: 34.180733, z: 0.25}
+    targetPosition: {x: 96.879486, y: 30.510733, z: 0.25}
     flip: 1
 --- !u!114 &114080152963210706
 MonoBehaviour:
@@ -979,16 +979,16 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4878711039763920}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.0029142597, w: 0.99999577}
+      solverRotation: {x: 0, y: 0, z: -0.002914293, w: 0.99999577}
       defaultLocalRotation: {x: 0, y: 0, z: -0.00007135772, w: 1}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4376943674507472}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.69343936, w: 0.720515}
+      solverRotation: {x: 0, y: 0, z: 0.6934402, w: 0.7205142}
       defaultLocalRotation: {x: 0, y: 0, z: 0.6858873, w: 0.72770786}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 111.07462, y: 36.295456, z: 0.25}
+    targetPosition: {x: 96.45462, y: 32.625458, z: 0.25}
     flip: 0
 --- !u!114 &114234605758847724
 MonoBehaviour:
@@ -1118,7 +1118,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.9131936, w: 0.40752617}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 112.4905, y: 34.63219, z: 0.25}
+    targetPosition: {x: 97.8705, y: 30.962189, z: 0.25}
     flip: 0
 --- !u!114 &114617142755126786
 MonoBehaviour:
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 4.9999957
+  m_Length: 5.0000014
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4878711039763920}
   m_AttachedIK: {fileID: 0}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 4.000091
+  m_Length: 4.000094
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4376943674507472}
   m_AttachedIK: {fileID: 114080152963210706}
@@ -1238,8 +1238,8 @@ MonoBehaviour:
   move: 0
   knockedBack: 0
   spawnPoint: {fileID: 0}
-  maxPower: 100
-  currentPower: 0
+  maxPower: 1000
+  currentPower: 1000
   maxHealth: 100
   currentHealth: 100
   heart1: {fileID: 0}
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.5999997
+  m_Length: 1.6000001
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4473014595843524}
   m_AttachedIK: {fileID: 114604746786375256}
@@ -1584,7 +1584,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1536138674
+  randomSeed: -1628816124
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4846,7 +4846,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1121226632
+  randomSeed: -2079338410
   InitialModule:
     serializedVersion: 3
     enabled: 1
