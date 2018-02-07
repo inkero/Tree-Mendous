@@ -29,40 +29,50 @@ public class LumberjackFov : MonoBehaviour {
     {
         while (true)
         {
-            yield return new WaitForSeconds(delay);
-            FindVisibleTargets();
+            
+                yield return new WaitForSeconds(delay);
+                FindVisibleTargets();
+            
         }
     }
 
     void FindVisibleTargets()
     {
-        visibleTargets.Clear();
-        targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
-
-        for(int i = 0; i < targetsInViewRadius.Length; i++)
+        if (!lumberjack.blinded)
         {
-            Transform target = targetsInViewRadius[i].transform;
-            Vector3 dirToTarget = (target.position - transform.position).normalized;
-            if(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2 || Vector3.Angle(-transform.forward, dirToTarget) < viewAngle / 2)
-            {
-                float dstToTarget = Vector3.Distance(transform.position, target.position);
+            visibleTargets.Clear();
+            targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
 
-                if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
+            for(int i = 0; i < targetsInViewRadius.Length; i++)
+            {
+                Transform target = targetsInViewRadius[i].transform;
+                Vector3 dirToTarget = (target.position - transform.position).normalized;
+                if(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2 || Vector3.Angle(-transform.forward, dirToTarget) < viewAngle / 2)
                 {
-                    visibleTargets.Add(target);
+                    float dstToTarget = Vector3.Distance(transform.position, target.position);
+
+                    if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
+                    {
+                        visibleTargets.Add(target);
+                    }
                 }
             }
-        }
 
-        if (visibleTargets.Count > 0)
-        {
-            lumberjack.Target = visibleTargets[0].gameObject;
-        }
-        else
+            if (visibleTargets.Count > 0)
+            {
+                lumberjack.Target = visibleTargets[0].gameObject;
+            }
+            else
+            {
+                lumberjack.Target = null;
+            }
+        } else
         {
             lumberjack.Target = null;
         }
     }
+
+    
 
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {

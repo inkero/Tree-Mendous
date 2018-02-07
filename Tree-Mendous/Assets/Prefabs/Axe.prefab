@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4819157893427124}
   - component: {fileID: 198431225045151762}
   - component: {fileID: 199917997464541006}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4591343582213610}
   - component: {fileID: 198645218916317062}
   - component: {fileID: 199887097188109770}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,9 +56,10 @@ GameObject:
   - component: {fileID: 50691266858394830}
   - component: {fileID: 114887114610547940}
   - component: {fileID: 114836123429511872}
-  m_Layer: 14
+  - component: {fileID: 58255420667385764}
+  m_Layer: 15
   m_Name: Axe
-  m_TagString: Bullet
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 4198074671457780}
   - component: {fileID: 198193763845636412}
   - component: {fileID: 199815987799757614}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +92,7 @@ GameObject:
   - component: {fileID: 212860601029742120}
   - component: {fileID: 68784542377093090}
   - component: {fileID: 111187417813999400}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382057425505802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125.51373, y: 34.749527, z: 0}
+  m_LocalPosition: {x: 141.72124, y: 31.065533, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4612742762394280}
@@ -187,6 +188,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58255420667385764
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382057425505802}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!68 &68784542377093090
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -244,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 15
-  weaponDamage: 50
+  weaponDamage: 25
   verticalSpeed: 0
   movementMultiplier: 1.5
 --- !u!198 &198193763845636412

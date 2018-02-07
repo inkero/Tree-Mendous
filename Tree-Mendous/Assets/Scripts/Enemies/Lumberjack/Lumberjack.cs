@@ -12,6 +12,10 @@ public class Lumberjack : Character {
     public GameObject Target { get; set; }
     public bool slashing = false;
 
+    public bool blinded = false;
+    private float blindTimer;
+    private float blindTimerCooldown;
+
     // Use this for initialization
     public override void Start () {
         base.Start();
@@ -19,14 +23,16 @@ public class Lumberjack : Character {
         ChangeState(new IdleState());
 
         originalMovementSpeed = movementSpeed;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         currentState.Execute();
 
         LookAtTarget();
-	}
+
+        blindCount();
+    }
 
     private void LookAtTarget()
     {
@@ -65,6 +71,13 @@ public class Lumberjack : Character {
         
     }
 
+    // Should use meleestate slash function instead
+    public void Slash()
+    {
+        Target.GetComponent<PlayerController>().addDamage(50);
+        audioSource.PlayOneShot(meleeSound, meleeVolume);
+    }
+
     public Vector2 GetDirection()
     {
         return facingRight ? Vector2.right : Vector2.left;
@@ -75,4 +88,46 @@ public class Lumberjack : Character {
         currentState.OnTriggerEnter(other);
     }
 
+    public void addDamage(float damage)
+    {
+        //myAnim.SetBool ("hit", true);
+        currentHealth -= damage;
+        audioSource.PlayOneShot(hitSound, hitVolume);
+
+        if (currentHealth <= 0)
+        {
+            StartCoroutine("makeDead");
+        }
+    }
+
+
+    IEnumerator makeDead()
+    {
+        MyAnimator.SetBool("died", true);
+        audioSource.PlayOneShot(deathSound, deathVolume);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(pickup, transform.position + new Vector3(0, -.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+        Destroy(gameObject);
+    }
+
+    public void blindEnemyFor(float seconds)
+    {
+        blinded = true;
+        blindTimerCooldown = seconds;
+    }
+
+    private void blindCount()
+    {
+       
+        if (blinded == true)
+        {
+            blindTimer += Time.deltaTime;
+
+            if (blindTimer >= 2)
+            {
+                blinded = false;
+                blindTimer = 0;
+            }
+        }
+    }
 }

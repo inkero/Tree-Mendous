@@ -5,10 +5,15 @@ using UnityEngine;
 public class IgnoreCollision : MonoBehaviour {
 
     [SerializeField]
-    private Collider2D other;
+    private string ignoreTag;
 
-	private void Awake()
+    void OnColliderEnter2D(Collider2D other)
     {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
+
+        if (other.gameObject.tag == ignoreTag)
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
+        }
+
     }
 }

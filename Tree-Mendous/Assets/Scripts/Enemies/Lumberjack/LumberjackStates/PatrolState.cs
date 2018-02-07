@@ -39,10 +39,7 @@ public class PatrolState : ILumberjackState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if(other.tag == "Edge")
-        {
-            lumberjack.ChangeDirection();
-        }
+        
     }
 
     private void Patrol()

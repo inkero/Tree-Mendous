@@ -35,9 +35,9 @@ public class ProjectileController : MonoBehaviour {
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 	}
 
-	void OnCollisionEnter2D(Collision2D col) {
+	void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.layer == 9) { // If collision object is an enemy
-			LumberjackController hurtEnemy = col.gameObject.GetComponent<LumberjackController>();
+			Lumberjack hurtEnemy = col.gameObject.GetComponent<Lumberjack>();
 			hurtEnemy.addDamage (weaponDamage);
 			Destroy (gameObject);
 		} else if(col.gameObject.layer != 8) { // If collision object is not the player

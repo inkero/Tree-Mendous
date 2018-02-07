@@ -9,6 +9,8 @@ TagManager:
   - Sunbeam
   - Waterbeam
   - Edge
+  - DamageArea
+  - Axe
   layers:
   - Default
   - TransparentFX
@@ -24,9 +26,9 @@ TagManager:
   - Root Wall
   - Waterbeam
   - Waterbeam Collider
-  - 
-  - 
-  - 
+  - bullet
+  - Axe
+  - DamageArea
   - 
   - 
   - 

@@ -11,6 +11,8 @@ public class IdleState : ILumberjackState
 
     private float idleDuration = 2;
 
+    
+
     public void Enter(Lumberjack lumberjack)
     {
         this.lumberjack = lumberjack;

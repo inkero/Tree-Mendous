@@ -8,6 +8,15 @@ public abstract class Character : MonoBehaviour {
     protected Transform knifePos;
 
     public float movementSpeed;
+    public float currentHealth = 100;
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+    public float hitVolume = 0.7f;
+    public AudioClip meleeSound;
+    public float meleeVolume = 0.7f;
+    public AudioClip deathSound;
+    public float deathVolume = 0.7f;
+    public GameObject pickup;
 
     [HideInInspector]
     public bool facingRight;
