@@ -74,7 +74,7 @@ public class Lumberjack : Character {
     // Should use meleestate slash function instead
     public void Slash()
     {
-        Target.GetComponent<PlayerController>().addDamage(50);
+        Target.GetComponent<PlayerController>().addDamage(25);
         audioSource.PlayOneShot(meleeSound, meleeVolume);
     }
 
