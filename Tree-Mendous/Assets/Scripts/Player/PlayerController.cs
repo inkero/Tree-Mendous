@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour {
 
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform rootWallMuzzle;
 	public GameObject rootWall;
 
-	// For audio
+    // For audio
 	public AudioClip shootSound;
 	public float shootVolume = 0.7f;
 	public AudioClip rootWallSound;
