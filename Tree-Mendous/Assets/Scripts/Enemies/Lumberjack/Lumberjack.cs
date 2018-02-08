@@ -123,7 +123,7 @@ public class Lumberjack : Character {
         {
             blindTimer += Time.deltaTime;
 
-            if (blindTimer >= 2)
+            if (blindTimer >= 1)
             {
                 blinded = false;
                 blindTimer = 0;

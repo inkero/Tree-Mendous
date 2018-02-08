@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lumberjack: {fileID: 114368348311437130}
-  viewRadius: 18
+  viewRadius: 24
   viewAngle: 70
   targetsInViewRadius: []
   visibleTargets: []
