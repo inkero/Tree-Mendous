@@ -913,6 +913,7 @@ MonoBehaviour:
     type: 2}
   chargeSpeed: 6
   slashing: 0
+  blinded: 0
 --- !u!114 &114517140452459786
 MonoBehaviour:
   m_ObjectHideFlags: 1
