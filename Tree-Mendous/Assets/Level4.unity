@@ -692,6 +692,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7735c8cf7364e2b48aa9a86ef634de67, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &286885292 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1464628937169484, guid: 0eb07bc8ad50bfd42993be7066b1ee86,
+    type: 2}
+  m_PrefabInternal: {fileID: 805577587}
+--- !u!114 &286885295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286885292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122e85bf88c784694a1f49617608311b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &286885296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286885292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.7375}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.56, y: 1.475}
+    newSize: {x: 2.56, y: 1.475}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 1.475}
+  m_EdgeRadius: 0
 --- !u!1001 &353277370
 Prefab:
   m_ObjectHideFlags: 0
@@ -895,7 +936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4195299754570136, guid: 2c343a9fe614dda42bd85fbcfa71d01b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.7051639
+      value: -0.70516384
       objectReference: {fileID: 0}
     - target: {fileID: 4195299754570136, guid: 2c343a9fe614dda42bd85fbcfa71d01b, type: 2}
       propertyPath: m_LocalRotation.w
@@ -4319,6 +4360,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 21849323485226186, guid: ef5dfeeb341e819488e42e87674cb07b,
+        type: 2}
+    - target: {fileID: 23952789878773410, guid: 2c343a9fe614dda42bd85fbcfa71d01b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21111487118751476, guid: d6cd914ac284f0540b46d9c0917d6876,
+        type: 2}
+    - target: {fileID: 23624396029519588, guid: 2c343a9fe614dda42bd85fbcfa71d01b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 21240026278787462, guid: bff4bc2c78045714683cd428338fa780,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c343a9fe614dda42bd85fbcfa71d01b, type: 2}
