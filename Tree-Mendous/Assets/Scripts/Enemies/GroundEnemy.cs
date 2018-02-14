@@ -22,7 +22,7 @@ public abstract class GroundEnemy : MonoBehaviour {
 
 	public float enemyMaxHealth;
 	public float currentHealth;
-	public float weaponDamage = 50;
+	public float weaponDamage = 25;
 
 	AudioSource audioSource;
 
