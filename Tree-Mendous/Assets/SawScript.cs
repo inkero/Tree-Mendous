@@ -8,7 +8,7 @@ public class SawScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().addDamage(50);
+            other.GetComponent<PlayerController>().addDamage(100);
         }
     }
 }
