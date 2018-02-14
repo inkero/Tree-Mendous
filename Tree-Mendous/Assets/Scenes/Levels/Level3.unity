@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8173f21ef1f1b49af9d5df1cea95b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 232757804}
+  enemy: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 343dc2ad8a642bc4f98c15df2e9c7bc8, type: 3}
   hitVolume: 0.7
 --- !u!61 &97644779
@@ -1005,12 +1005,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1102188140261682, guid: 50c1e10d2a60c264eb104eb1df0ba694,
     type: 2}
   m_PrefabInternal: {fileID: 1163175111}
---- !u!114 &199746403 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114699518437325148, guid: 2c343a9fe614dda42bd85fbcfa71d01b,
-    type: 2}
-  m_PrefabInternal: {fileID: 141655317}
-  m_Script: {fileID: 11500000, guid: 0f1861f8fbbdd09489d654148813569e, type: 3}
 --- !u!1 &215227434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,12 +1033,6 @@ Transform:
   m_Father: {fileID: 1032301726}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &232757804 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114511624230502022, guid: de8dfa191cac7754fb43bbadc96e7b23,
-    type: 2}
-  m_PrefabInternal: {fileID: 1042769279}
-  m_Script: {fileID: 11500000, guid: 18b5567e401404870818beab5d856bf1, type: 3}
 --- !u!4 &232757809 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4017546831197162, guid: de8dfa191cac7754fb43bbadc96e7b23,
@@ -2152,7 +2140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d3841dafdcf453fb9c4e11d1518cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 199746403}
+  enemy: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 343dc2ad8a642bc4f98c15df2e9c7bc8, type: 3}
   hitVolume: 0.7
 --- !u!61 &582053578
@@ -6903,7 +6891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d3841dafdcf453fb9c4e11d1518cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 199746403}
+  enemy: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 343dc2ad8a642bc4f98c15df2e9c7bc8, type: 3}
   hitVolume: 0.7
 --- !u!61 &1516274998
@@ -8038,6 +8026,11 @@ Prefab:
     - target: {fileID: 4960332189080892, guid: e5ceb5d1105a2c949bd45ae0b4614285, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114126591470467958, guid: e5ceb5d1105a2c949bd45ae0b4614285,
+        type: 2}
+      propertyPath: LevelSelect
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5ceb5d1105a2c949bd45ae0b4614285, type: 2}

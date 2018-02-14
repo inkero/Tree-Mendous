@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextLevel : MonoBehaviour {
 
-	public int LevelSelect;
+	public string LevelSelect;
 
 	void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player")
