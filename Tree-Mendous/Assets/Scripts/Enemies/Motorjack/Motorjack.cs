@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lumberjack : Enemy {
+public class Motorjack : Enemy {
 
-    private ILumberjackState currentState;
+    private IMotorjackState currentState;
 
     public float chargeSpeed;
     public float originalMovementSpeed { get; set; }
@@ -20,7 +20,7 @@ public class Lumberjack : Enemy {
     public override void Start () {
         base.Start();
         facingRight = false;
-        ChangeState(new IdleState());
+        ChangeState(new MotorjackIdleState());
 
         originalMovementSpeed = movementSpeed;
     }
@@ -47,7 +47,7 @@ public class Lumberjack : Enemy {
         }
     }
 
-    public void ChangeState(ILumberjackState newState)
+    public void ChangeState(IMotorjackState newState)
     {
         if(currentState != null)
         {
@@ -74,7 +74,7 @@ public class Lumberjack : Enemy {
     // Should use meleestate slash function instead
     public void Slash()
     {
-        Target.GetComponent<PlayerController>().addDamage(25);
+        Target.GetComponent<PlayerController>().addDamage(50);
         audioSource.PlayOneShot(meleeSound, meleeVolume);
     }
 
@@ -87,16 +87,19 @@ public class Lumberjack : Enemy {
     {
         currentState.OnTriggerEnter(other);
 
-        if (other.tag == "Edge")
+        if(other.tag == "Edge")
         {
             Target = null;
-            LumberjackFov enemySight = gameObject.GetComponentInChildren<LumberjackFov>();
+            MotorjackFov enemySight = gameObject.GetComponentInChildren<MotorjackFov>();
             blinded = true;
             ChangeDirection();
         }
     }
 
+    
 
+
+    
 
     public void blindEnemyFor(float seconds)
     {

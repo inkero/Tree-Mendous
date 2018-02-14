@@ -47,7 +47,8 @@ public class CustomRestarter : MonoBehaviour {
         playerController.energy4.gameObject.SetActive(false);
         playerController.energy5.gameObject.SetActive(false);
         player.SetActive(true);
-        player.transform.position = spawnPoint.position;        
+        player.transform.position = spawnPoint.position;  
+        
 		//GameObject newPlayer = Instantiate (player, spawnPoint.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
         //gameObject.GetComponent<UnityStandardAssets._2D.Camera2DFollow>().target = newPlayer.transform.GetChild(0);
 	}

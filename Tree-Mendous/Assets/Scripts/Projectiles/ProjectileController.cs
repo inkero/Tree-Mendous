@@ -37,11 +37,20 @@ public class ProjectileController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.layer == 9) { // If collision object is an enemy
-			Lumberjack hurtEnemy = col.gameObject.GetComponent<Lumberjack>();
+			Enemy hurtEnemy = col.gameObject.GetComponent<Enemy>();
 			hurtEnemy.addDamage (weaponDamage);
 			Destroy (gameObject);
 		} else if(col.gameObject.layer != 8) { // If collision object is not the player
 			Destroy (gameObject);
 		}
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+
+        if (col.gameObject.layer != 8)
+        { // If collision object is not the player
+            Destroy(gameObject);
+        }
+    }
 }
