@@ -337,6 +337,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1596414471804580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4399258197157824}
+  m_Layer: 0
+  m_Name: WoodyBloodPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1683914119418458
 GameObject:
   m_ObjectHideFlags: 1
@@ -439,7 +454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102188140261682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.83, y: 29.04, z: 0.25}
+  m_LocalPosition: {x: 125.07, y: 31.68, z: 0}
   m_LocalScale: {x: 0.29932195, y: 0.29932195, z: 0.29932195}
   m_Children:
   - {fileID: 4707795256213618}
@@ -452,6 +467,7 @@ Transform:
   - {fileID: 4611888232801712}
   - {fileID: 4641640820652582}
   - {fileID: 4612687750397526}
+  - {fileID: 4399258197157824}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -474,7 +490,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1501988977125888}
-  m_LocalRotation: {x: 0, y: 0, z: -0.36447743, w: 0.93121225}
+  m_LocalRotation: {x: 0, y: 0, z: -0.364471, w: 0.93121475}
   m_LocalPosition: {x: 1.6000006, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -512,7 +528,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4878711039763920}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 87.80501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 87.80601}
+--- !u!4 &4399258197157824
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596414471804580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.72, y: 1.24, z: 0}
+  m_LocalScale: {x: 3.3408844, y: 3.3408844, z: 3.3408844}
+  m_Children: []
+  m_Father: {fileID: 4086392738696840}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4473014595843524
 Transform:
   m_ObjectHideFlags: 1
@@ -636,7 +665,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331933280135080}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.0000019828465}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.000004128614}
   m_LocalPosition: {x: 4.4015985, y: 0.87550354, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -700,7 +729,7 @@ Transform:
   - {fileID: 4793895273978904}
   m_Father: {fileID: 4273224599812276}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.33400002}
 --- !u!4 &4888868558149198
 Transform:
   m_ObjectHideFlags: 1
@@ -1133,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 5.0000014
+  m_Length: 4.9999957
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4878711039763920}
   m_AttachedIK: {fileID: 0}
@@ -1149,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 4.0000873
+  m_Length: 4.000091
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4376943674507472}
   m_AttachedIK: {fileID: 114080152963210706}
@@ -1239,8 +1268,8 @@ MonoBehaviour:
   move: 0
   knockedBack: 0
   spawnPoint: {fileID: 0}
-  maxPower: 1000
-  currentPower: 1000
+  maxPower: 100
+  currentPower: 0
   maxHealth: 100
   currentHealth: 100
   heart1: {fileID: 0}
@@ -1270,6 +1299,9 @@ MonoBehaviour:
   hitVolume: 0.7
   deathSound: {fileID: 8300000, guid: af5534bdd3766cc4490ec7e7646633b5, type: 3}
   deathVolume: 0.1
+  woodyBloodSplash: {fileID: 1530768269994572, guid: ab1f65e7accd8e94b96a492111fd4d57,
+    type: 2}
+  woodyBloodSplashTransform: {fileID: 4399258197157824}
 --- !u!114 &114914827520834704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1298,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.6000001
+  m_Length: 1.5999997
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4473014595843524}
   m_AttachedIK: {fileID: 114604746786375256}

@@ -68,10 +68,13 @@ public class PlayerController : MonoBehaviour {
 	public float deathVolume = 0.7f;
 	AudioSource audioSource;
 
+    public GameObject woodyBloodSplash;
+    public Transform woodyBloodSplashTransform;
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		myRB = GetComponent<Rigidbody2D> ();
 		myAnim = GetComponent<Animator> ();
 		audioSource = GetComponent<AudioSource> ();
@@ -300,10 +303,12 @@ public class PlayerController : MonoBehaviour {
 
 		knockedBack = true;
 		myRB.velocity = new Vector2 (0, 5f);
-		//myRB.gravityScale = originalGS;
+        //myRB.gravityScale = originalGS;
+
+        GameObject woodyBloodObject = (GameObject)Instantiate(woodyBloodSplash, woodyBloodSplashTransform.position, Quaternion.Euler(new Vector3(-115, 0, 0)));
 
 
-		if (currentHealth <= 0){
+        if (currentHealth <= 0){
 			StartCoroutine ("makeDead");
 		}
 	}

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public abstract class Enemy : Character {
 
+    public GameObject bloodSplash;
+    public Transform bloodSplashTransform;
+
     public void addDamage(float damage)
     {
         //myAnim.SetBool ("hit", true);
         currentHealth -= damage;
         audioSource.PlayOneShot(hitSound, hitVolume);
+        GameObject bloodObject = (GameObject)Instantiate(bloodSplash, bloodSplashTransform.position, Quaternion.Euler(new Vector3(-115, 0, 0)));
 
         if (currentHealth <= 0)
         {
