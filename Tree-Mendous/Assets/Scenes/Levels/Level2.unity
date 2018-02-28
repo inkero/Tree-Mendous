@@ -7694,9 +7694,9 @@ Animation:
   m_GameObject: {fileID: 1580568546}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9d880493ac9478d488236d3a7a33b772, type: 2}
+  m_Animation: {fileID: 7400000, guid: 1ea76ec611c923a4e8a2bb414c5791e1, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 9d880493ac9478d488236d3a7a33b772, type: 2}
+  - {fileID: 7400000, guid: 1ea76ec611c923a4e8a2bb414c5791e1, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -8076,7 +8076,7 @@ Prefab:
     - target: {fileID: 114126591470467958, guid: e5ceb5d1105a2c949bd45ae0b4614285,
         type: 2}
       propertyPath: LevelSelect
-      value: Level3
+      value: Cutscene2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5ceb5d1105a2c949bd45ae0b4614285, type: 2}
