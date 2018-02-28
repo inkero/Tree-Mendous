@@ -5344,7 +5344,7 @@ Prefab:
         type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: d35fca6f7deb54c24bb1bb7dece42f83, type: 2}
     - target: {fileID: 114658886736402134, guid: 50c1e10d2a60c264eb104eb1df0ba694,
         type: 2}
       propertyPath: m_Length
