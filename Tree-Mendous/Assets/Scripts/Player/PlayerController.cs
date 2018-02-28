@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 
 	// For jump delay
 	float passedWaitTime;
-	float jumpDelay = 0.2f;
+	float jumpDelay = 0.5f;
 	bool startJumpTimer = false;
 
 	Rigidbody2D myRB;
@@ -99,7 +99,9 @@ public class PlayerController : MonoBehaviour {
 			startJumpTimer = true; // Used for inconsistent jumping fix
 			grounded = false;
 			myAnim.SetBool ("isGrounded", grounded);
+			myRB.velocity = new Vector2(myRB.velocity.x, 0);
 			myRB.AddForce (new Vector2 (0, jumpHeight), ForceMode2D.Impulse);
+
 			audioSource.PlayOneShot (jumpSound, jumpVolume);
 		}
         if (currentHealth == 100f)
