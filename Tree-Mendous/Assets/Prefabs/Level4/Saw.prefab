@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212515076148192988}
   - component: {fileID: 95677508035383200}
   - component: {fileID: 114441735057052232}
-  - component: {fileID: 61243195517561070}
+  - component: {fileID: 70473909566097840}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -36,15 +36,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1464628937169484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.6877, y: 33.06422, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 115, y: 36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61243195517561070
-BoxCollider2D:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!70 &70473909566097840
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,19 +55,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000038146973, y: 0.7714615}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.6675, y: 1.54}
-    newSize: {x: 10.67, y: 6.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.698616, y: 1.4987717}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.3}
+  m_Size: {x: 2.5, y: 1}
+  m_Direction: 0
 --- !u!95 &95677508035383200
 Animator:
   serializedVersion: 3
