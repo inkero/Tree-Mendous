@@ -39,7 +39,10 @@ public class MotorjackRangedState : IMotorjackState
 
     public void OnTriggerEnter(Collider2D other)
     {
-
+        if(other.tag == "Player")
+        {
+            motorjack.Slash();
+        }
     }
 
     private void ThrowAxe()

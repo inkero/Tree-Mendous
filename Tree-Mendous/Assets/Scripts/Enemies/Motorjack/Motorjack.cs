@@ -87,13 +87,7 @@ public class Motorjack : Enemy {
     {
         currentState.OnTriggerEnter(other);
 
-        if(other.tag == "Edge")
-        {
-            Target = null;
-            MotorjackFov enemySight = gameObject.GetComponentInChildren<MotorjackFov>();
-            blinded = true;
-            ChangeDirection();
-        }
+        
     }
 
     

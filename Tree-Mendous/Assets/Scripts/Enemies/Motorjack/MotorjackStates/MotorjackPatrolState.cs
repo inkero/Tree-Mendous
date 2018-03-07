@@ -39,7 +39,13 @@ public class MotorjackPatrolState : IMotorjackState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        
+        if (other.tag == "Edge")
+        {
+            motorjack.Target = null;
+            //MotorjackFov enemySight = gameObject.GetComponentInChildren<MotorjackFov>();
+            //blinded = true;
+            motorjack.ChangeDirection();
+        }
     }
 
     private void Patrol()

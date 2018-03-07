@@ -39,7 +39,13 @@ public class PatrolState : ILumberjackState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        
+        if (other.tag == "Edge")
+        {
+            lumberjack.Target = null;
+            //LumberjackFov enemySight = gameObject.GetComponentInChildren<LumberjackFov>();
+            //blinded = true;
+            lumberjack.ChangeDirection();
+        }
     }
 
     private void Patrol()

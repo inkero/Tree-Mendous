@@ -51,7 +51,7 @@ public class MotorjackFov : MonoBehaviour {
                 {
                     float dstToTarget = Vector3.Distance(transform.position, target.position);
 
-                    if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
+                    if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && gameObject.transform.parent.Find("GroundPoint").position.y >= target.GetChild(0).position.y)
                     {
                         visibleTargets.Add(target);
                     }

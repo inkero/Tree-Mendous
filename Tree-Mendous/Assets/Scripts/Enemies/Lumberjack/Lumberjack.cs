@@ -86,14 +86,6 @@ public class Lumberjack : Enemy {
     void OnTriggerEnter2D(Collider2D other)
     {
         currentState.OnTriggerEnter(other);
-
-        if (other.tag == "Edge")
-        {
-            Target = null;
-            LumberjackFov enemySight = gameObject.GetComponentInChildren<LumberjackFov>();
-            blinded = true;
-            ChangeDirection();
-        }
     }
 
 
